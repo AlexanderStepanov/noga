@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4129ca6d-121a-4eff-8368-7c66e611007a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-    </list>
+    <list default="true" id="4129ca6d-121a-4eff-8368-7c66e611007a" name="Default" comment="" />
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/index.php" changelist="4129ca6d-121a-4eff-8368-7c66e611007a" time="1379752601355" ignored="false" />
