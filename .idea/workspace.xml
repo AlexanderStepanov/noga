@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4129ca6d-121a-4eff-8368-7c66e611007a" name="Default" comment="" />
+    <list default="true" id="4129ca6d-121a-4eff-8368-7c66e611007a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+    </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.php" changelist="4129ca6d-121a-4eff-8368-7c66e611007a" time="1379752601355" ignored="false" />
+    <file path="/index.php" changelist="4129ca6d-121a-4eff-8368-7c66e611007a" time="1379870607172" ignored="false" />
     <file path="/Dummy.txt" changelist="4129ca6d-121a-4eff-8368-7c66e611007a" time="1379752580093" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +30,7 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="90" selection-start="2183" selection-end="2191" vertical-scroll-proportion="0.74178404">
+            <state line="50" column="74" selection-start="1428" selection-end="1428" vertical-scroll-proportion="0.81220657">
               <folding />
             </state>
           </provider>
@@ -302,7 +304,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="90" selection-start="2183" selection-end="2191" vertical-scroll-proportion="0.74178404">
+        <state line="50" column="74" selection-start="1428" selection-end="1428" vertical-scroll-proportion="0.81220657">
           <folding />
         </state>
       </provider>
