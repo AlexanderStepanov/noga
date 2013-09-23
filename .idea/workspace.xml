@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4129ca6d-121a-4eff-8368-7c66e611007a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MoveObject.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MoveObject.html" afterPath="$PROJECT_DIR$/MoveObject.html" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +40,7 @@
       <file leaf-file-name="MoveObject.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MoveObject.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="30" selection-start="2549" selection-end="2556" vertical-scroll-proportion="1.3833605">
+            <state line="203" column="49" selection-start="5541" selection-end="5541" vertical-scroll-proportion="0.6722973">
               <folding />
             </state>
           </provider>
@@ -332,7 +331,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MoveObject.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="30" selection-start="2549" selection-end="2556" vertical-scroll-proportion="1.3833605">
+        <state line="203" column="49" selection-start="5541" selection-end="5541" vertical-scroll-proportion="0.6722973">
           <folding />
         </state>
       </provider>

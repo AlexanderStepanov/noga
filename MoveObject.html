@@ -32,7 +32,7 @@
                 ctx = canvas.getContext("2d");
 
                 // Paint it black.
-                ctx.fillStyle = "black";
+                ctx.fillStyle = "white";
                 ctx.rect(0, 0, 300, 300);
                 ctx.fill();
 
@@ -196,8 +196,10 @@
         function doGameLoop() {
 
             // Put old background down to erase shipe.
-            ctx.putImageData(oldBack, oldShipX, oldShipY);
 
+            //ctx.putImageData(oldBack, oldShipX, oldShipY);
+            // коммент верхней строки пофиксил проблему с остававшейся тарелкой
+            // возможно, в каких-то ситуациях это вызовет проблемы, я не понимаю, зачем эта строка
             // Put ship in new position.
             ctx.putImageData(ship, shipX, shipY);
         }
