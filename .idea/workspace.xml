@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4129ca6d-121a-4eff-8368-7c66e611007a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MoveObject.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/index.php" changelist="4129ca6d-121a-4eff-8368-7c66e611007a" time="1379870607172" ignored="false" />
     <file path="/Dummy.txt" changelist="4129ca6d-121a-4eff-8368-7c66e611007a" time="1379752580093" ignored="false" />
+    <file path="/MoveObject.html" changelist="4129ca6d-121a-4eff-8368-7c66e611007a" time="1379962810277" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +29,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="74" selection-start="1428" selection-end="1428" vertical-scroll-proportion="0.81220657">
+            <state line="36" column="1" selection-start="1082" selection-end="1082" vertical-scroll-proportion="-12.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MoveObject.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MoveObject.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="97" column="30" selection-start="2549" selection-end="2556" vertical-scroll-proportion="1.3833605">
               <folding />
             </state>
           </provider>
@@ -64,6 +75,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/MoveObject.html" />
       </list>
     </option>
   </component>
@@ -172,6 +184,13 @@
     <configuration default="true" type="AppEnginePhpConfigurationType" factoryName="App Engine for PHP">
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="PHP Script.index.php" />
     </list>
@@ -271,7 +290,9 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.php">
@@ -304,7 +325,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="74" selection-start="1428" selection-end="1428" vertical-scroll-proportion="0.81220657">
+        <state line="36" column="1" selection-start="1082" selection-end="1082" vertical-scroll-proportion="-12.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MoveObject.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="30" selection-start="2549" selection-end="2556" vertical-scroll-proportion="1.3833605">
           <folding />
         </state>
       </provider>
