@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4129ca6d-121a-4eff-8368-7c66e611007a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MoveObject.html" afterPath="$PROJECT_DIR$/MoveObject.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/backgroud.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/inputRoundedBackground.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/labyrinth.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/roundedButton.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.php" changelist="4129ca6d-121a-4eff-8368-7c66e611007a" time="1379870607172" ignored="false" />
+    <file path="/index.php" changelist="4129ca6d-121a-4eff-8368-7c66e611007a" time="1380035150845" ignored="false" />
     <file path="/Dummy.txt" changelist="4129ca6d-121a-4eff-8368-7c66e611007a" time="1379752580093" ignored="false" />
     <file path="/MoveObject.html" changelist="4129ca6d-121a-4eff-8368-7c66e611007a" time="1379962810277" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,19 +33,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="1" selection-start="1082" selection-end="1082" vertical-scroll-proportion="-12.875">
+            <state line="190" column="40" selection-start="4628" selection-end="4628" vertical-scroll-proportion="0.6660959">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MoveObject.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MoveObject.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MoveObject.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="203" column="49" selection-start="5541" selection-end="5541" vertical-scroll-proportion="0.6722973">
+            <state line="215" column="0" selection-start="5723" selection-end="5723" vertical-scroll-proportion="-7.827586">
               <folding />
             </state>
           </provider>
@@ -73,8 +78,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/MoveObject.html" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -150,6 +155,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -210,13 +216,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="22" width="1420" height="811" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496361" sideWeight="0.6724387" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2561863" sideWeight="0.6724387" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2561863" sideWeight="0.6724387" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3982684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -322,16 +328,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/MoveObject.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="1" selection-start="1082" selection-end="1082" vertical-scroll-proportion="-12.875">
+        <state line="215" column="0" selection-start="5723" selection-end="5723" vertical-scroll-proportion="-7.827586">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MoveObject.html">
+    <entry file="file://$PROJECT_DIR$/img/backgroud.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="49" selection-start="5541" selection-end="5541" vertical-scroll-proportion="0.6722973">
+        <state line="190" column="40" selection-start="4628" selection-end="4628" vertical-scroll-proportion="0.6660959">
           <folding />
         </state>
       </provider>
