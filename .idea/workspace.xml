@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4129ca6d-121a-4eff-8368-7c66e611007a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/backgroud.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/inputRoundedBackground.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/labyrinth.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/roundedButton.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Opa.txt" afterPath="" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
