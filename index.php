@@ -3,7 +3,7 @@
 
 <html>
 <head>
-    <script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="/scripts/main.js"></script>
 
     <link type="text/css" rel="stylesheet" href="style.css" />
