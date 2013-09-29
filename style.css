@@ -43,6 +43,45 @@ html {
     background-color: white;
 }
 
+#second img{
+    opacity: 0.34;
+}
+
+#second #secondLeftBlock{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -520px;
+}
+
+#second #secondRightBlock{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: 80px;
+}
+
+#second h1{
+    margin-top: 40px;
+    margin-left: 50%;
+    color: #66d6cf;
+}
+
+#second h2{
+    margin-bottom: 30px;
+    margin-left: 50%;
+    color: #66d6cf;
+}
+
+#second p {
+    width: 200px;
+    margin-left: 50%;
+    margin-bottom: 30px;
+    color: #878787;
+}
+
 #emailDiv{
     background-image: url("/img/inputRoundedBackground.png");
     padding-top: 10px;

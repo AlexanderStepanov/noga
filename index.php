@@ -55,7 +55,26 @@
         ?>
     </div>
     <div id="second">
-        <img src="/img/labyrinth.png" />
+        <div id="secondLeftBlock">
+            <h2>Раньше</h2>
+            <p>Учитесь на чужих ошибках, пацанчики.
+                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                Aenean sollicitudin lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
+                elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+            <img id="labyrinthLeft" src="/img/labyrinth.png" />
+            <h1>03:15</h1>
+        </div>
+        <div id="secondRightBlock">
+            <h2>Теперь</h2>
+            <p>Учитесь на чужих ошибках, пацанчики.
+                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                Aenean sollicitudin lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
+                elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+            <img id="labyrinthRight" src="/img/labyrinth.png" />
+            <h1>00:01</h1>
+        </div>
+
+
     </div>
 </body>
 </html>
