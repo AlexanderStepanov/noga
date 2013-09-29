@@ -6,12 +6,9 @@
     <script type="text/javascript">
         var _shipX = 0;
         var _shipY = 0;
-        var _oldShipX = 0;
-        var _oldShipY = 0;
         var _nextPoint = new Object();
         var _isMoving = false;
         var _delay = 0;
-
         var _moveQueue = new Array();
 
         $(document).ready(function() {
@@ -19,11 +16,56 @@
         });
 
         function startMoving() {
-            moveTo(500, 0);
-            moveTo(500, 500);
-            moveTo(0, 500);
-            moveTo(0, 0);
-            moveTo(200, 500);
+            setCoordinates(100, 100);
+
+            for(var i = 0; i <= 360 * 3; i++){
+                setAngle(i, 100, 100);
+
+
+            }
+           
+
+        }
+
+//        function drawCircle(selector, center, radius, angle, x, y) {
+//            var total = $(selector).length;
+//            var alpha = Math.PI * 2 / total;
+//            angle *= Math.PI / 180;
+//
+//            $(selector).each(function(index) {
+//                var theta = alpha * index;
+//                var pointx  =  Math.floor(Math.cos( theta + angle) * radius);
+//                var pointy  = Math.floor(Math.sin( theta + angle) * radius );
+//
+//                $(this).css('margin-left', pointx + x + 'px');
+//                $(this).css('margin-top', pointy + y + 'px');
+//            });
+//        }
+//
+//        function moveByCircle(){
+//            var angle = 90;
+//            drawCircle('.box', 50, 200, angle, 310, 220);
+//            $("#movebtn").on('click', function() {
+//                angle = angle + 5;
+//                drawCircle('.box', 50, 200, angle, 310, 220);
+//            });
+
+
+
+        function setAngle(angle, x, y){
+            var radius = 50;
+            var alpha = Math.PI * 2;
+            angle *= Math.PI / 180;
+            var theta = alpha;
+
+            var pointx  =  Math.floor(Math.cos( theta + angle) * radius);
+            var pointy  = Math.floor(Math.sin( theta + angle) * radius );
+
+
+            var xx = pointx + x;
+            var yy = pointy + y;
+
+            moveTo(xx, yy);
         }
 
         function moveTo(x, y){
@@ -38,6 +80,12 @@
             if(_isMoving || _moveQueue.length == 0) return;
 
             _nextPoint = dequeue();
+            if(_nextPoint.x == _shipX && _nextPoint.y == _shipY){
+                if(_moveQueue.length == 0) return;
+
+                _nextPoint = dequeue();
+            }
+
             var differenceBetweenXs = Math.abs(_nextPoint.x - _shipX);
             var differenceBetweenYs = Math.abs(_nextPoint.y - _shipY);
             var allIterations = differenceBetweenXs > differenceBetweenYs ?
@@ -45,7 +93,6 @@
             var oneIterationXStep = differenceBetweenXs / allIterations;
             var oneIterationYStep = differenceBetweenYs / allIterations;
             var iterations = 0;
-            savePreviousValues();
 
             _delay = 0;
             while(iterations != allIterations){
@@ -70,8 +117,16 @@
             }
         }
 
+        function setCoordinates(x, y){
+            _shipX = x;
+            _shipY = y;
+
+            $('#myDiv').css("left", x);
+            $('#myDiv').css("top", y);
+        }
+
         function isMovedToEnd(){
-            return _shipX == _nextPoint.x && _shipY == _nextPoint.y;
+            return _shipX == _nextPoint.x || _shipY == _nextPoint.y;
         }
 
         function finishMove(){
@@ -87,19 +142,11 @@
             return result;
         }
 
-        function savePreviousValues(){
-            _oldShipX = _shipX;
-            _oldShipY = _shipY;
-        }
-
         function makeCloser(current, mustBe, closerValue){
             return current >= mustBe? current - closerValue : current + closerValue;
         }
 
-        function setCoordinates(x, y){
-            $('#myDiv').css("left", x);
-            $('#myDiv').css("top", y);
-        }
+
     </script>
 </head>
     <body>

@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4129ca6d-121a-4eff-8368-7c66e611007a" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/jquery-2.0.3.min.js" afterPath="$PROJECT_DIR$/scripts/jquery-2.0.3.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MoveObject.html" afterPath="$PROJECT_DIR$/MoveObject.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/index.php" changelist="4129ca6d-121a-4eff-8368-7c66e611007a" time="1380123665739" ignored="false" />
     <file path="/Dummy.txt" changelist="4129ca6d-121a-4eff-8368-7c66e611007a" time="1380131338101" ignored="false" />
-    <file path="/MoveObject.html" changelist="4129ca6d-121a-4eff-8368-7c66e611007a" time="1380145075303" ignored="false" />
+    <file path="/MoveObject.html" changelist="4129ca6d-121a-4eff-8368-7c66e611007a" time="1380377740870" ignored="false" />
     <file path="/MoveObjectOriginal.html" changelist="4129ca6d-121a-4eff-8368-7c66e611007a" time="1380129455637" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +59,7 @@
       <file leaf-file-name="MoveObject.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MoveObject.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="32" selection-start="1788" selection-end="1788" vertical-scroll-proportion="1.8327974">
+            <state line="25" column="10" selection-start="590" selection-end="590" vertical-scroll-proportion="-1.8633441">
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -266,14 +262,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="22" width="1420" height="811" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496361" sideWeight="0.6724387" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2561863" sideWeight="0.6724387" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3982684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2561863" sideWeight="0.60202605" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39797395" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756132" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -411,7 +407,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MoveObject.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="32" selection-start="1788" selection-end="1788" vertical-scroll-proportion="1.8327974">
+        <state line="25" column="10" selection-start="590" selection-end="590" vertical-scroll-proportion="-1.8633441">
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
