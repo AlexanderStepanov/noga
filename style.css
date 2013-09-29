@@ -43,9 +43,31 @@ html {
     background-color: white;
 }
 
-#second img{
-    opacity: 0.34;
+#third{
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 200%;
+    background-size: cover;
+    background-image: url("/img/thirdBackground.png");
+    background-repeat: no-repeat;
 }
+
+#fourth{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    min-height: 100%;
+    top: 300%;
+    background-size: cover;
+    background-image: url("/img/backgroud.jpg");
+    background-repeat: no-repeat;
+}
+
+/*#second img{*/
+    /*opacity: 0.34;*/
+/*}*/
 
 #second #secondLeftBlock{
     position: absolute;
@@ -126,5 +148,26 @@ html {
     background-color: transparent;
     position: absolute;
     left: 350px;
+}
+#lapTopContainer{
+    left: 20%;
+    top: 10%;
+    position: absolute;
+}
+
+#textStyle{
+    color: white;
+}
+#textHeaderStyle{
+    font-size: 20pt;
+    color: white;
+}
+
+#howItWorksContainer{
+    left: 28%;
+    top: 75%;
+    width: 560px;
+    height: 100px;
+    position: absolute;
 }
 
