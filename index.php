@@ -13,8 +13,10 @@
     </title>
 </head>
 <body>
-<div id="first">
 
+
+<div id="first">
+    <div id="backgroundContainer"></div>
     <?php
 
     if (isset( $_POST['email']) && $_POST['email'] != '')
@@ -36,6 +38,7 @@
     else
     {
         ?>
+
         <div id="formContainer">
             <form name ="form1" method="post" action="index.php">
                 <div>
@@ -53,7 +56,7 @@
     <?php
     }
     ?>
-</div>
+
 <div id="second">
     <div id="secondLeftBlock">
         <h2>Раньше</h2>
@@ -73,6 +76,11 @@
         <img id="labyrinthRight" src="/img/labyrinth.png" />
         <h1>00:01</h1>
     </div>
+
+</div>
+</div>
+
+
     <div id="third">
         <div id="lapTopContainer">
             <img src="img/lapTop.png">
@@ -91,7 +99,7 @@
 
         </div>
     </div>
-</div>
+
 </body>
 </html>
 
