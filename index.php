@@ -95,11 +95,56 @@
         </div>
     </div>
     <div id="fourth">
-        <div>
+        <?php
+        if (isset( $_POST['email']) && $_POST['email'] != '')
+        {
+            echo "молодец!";
+            $con=mysqli_connect("localhost","root","root","nogaDB");
+            if (mysqli_connect_errno())
+            {
+                echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            }
+            $sql="INSERT INTO Emails (Date, Email) VALUES (now(),'$_POST[email]')";
+            if (!mysqli_query($con,$sql))
+            {
+                die('Error: ' . mysqli_error($con));
+            }
+            echo "1 record added";
+            mysqli_close($con);
+        }
+        else
+        {
+        ?>
+            <div id="subscribeDiv">
+                <h3 id=textHeaderStyle>
+                    Подпишись
+                </h3>
+                <h3 id="textStyle">
+                    И первым узнаешь об изменении философии поиска
+                    И первым узнаешь об изменении философии поиска
+                    И первым узнаешь об изменении философии поиска
+                    И первым узнаешь об изменении философии поиска
+                    И первым узнаешь об изменении философии поиска
+                    И первым узнаешь об изменении философии поиска
+                </h3>
+            </div>
+        <div id="secondFormContainer">
+            <form name ="form1" method="post" action="index.php">
+                <div>
+                    <div id="emailSecondDiv">
+                        <input id="emailSecond" value="" name="email" placeholder="Your@mail.com">
+                    </div>
 
+                    <input id="submitButtonGreen" type= "Submit" Name = "Submit1" VALUE = "Подписаться">
+
+                    <p><span id="valid"></span></p>
+                </div>
+            </form>
         </div>
+        <?php
+        }
+        ?>
     </div>
-
 </body>
 </html>
 

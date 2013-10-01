@@ -11,9 +11,13 @@ html {
     margin: 0; padding: 0;
 }
 
-::-webkit-input-placeholder { /* WebKit browsers */
+#email::-webkit-input-placeholder {
     color:    white;
     opacity: 0.7 !important;
+}
+
+#emailSecond::-webkit-input-placeholder {
+    color: #5dc6a5;
 }
 
 #valid{
@@ -139,6 +143,30 @@ position: fixed;
     height: 25px;
 }
 
+#emailSecond{
+    background-color: transparent;
+    color: #5dc6a5;
+    font-size: 15pt;
+    border: none;
+    width: 320px;
+    height: 25px;
+}
+
+#emailSecondDiv{
+    background-image: url("/img/inputBackground.png");
+    padding-top: 10px;
+    padding-left: 9px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    width:  335px;
+    height: 43px;
+    position: absolute;
+}
+
+#emailSecond:focus{
+    outline: 0;
+}
+
 #email:focus{
     outline: 0;
 }
@@ -146,6 +174,16 @@ position: fixed;
 #formContainer{
     left: 50%;
     top: 50%;
+    position: absolute;
+    width: 500px;
+    height: 80px;
+    margin-left: -250px;
+    margin-top: -40px;
+}
+
+#secondFormContainer{
+    left: 50%;
+    top: 70%;
     position: absolute;
     width: 500px;
     height: 80px;
@@ -164,6 +202,19 @@ position: fixed;
     position: absolute;
     left: 350px;
 }
+
+#submitButtonGreen{
+    color: floralwhite;
+    font-size: 11pt;
+    background-image: url("/img/greenButtonBackground.png");
+    width: 135px;
+    height: 43px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    left: 350px;
+}
+
 #lapTopContainer{
     left: 50%;
     top: 10%;
@@ -189,6 +240,13 @@ position: fixed;
     width: 560px;
     height: 100px;
     position: absolute;
+}
 
+#subscribeDiv{
+    left: 50%;
+    top: 30%;
+    position: absolute;
+    width: 500px;
+    margin-left: -250px;
 }
 

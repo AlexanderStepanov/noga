@@ -24,7 +24,6 @@ function validate(){
 
 $(document).ready(function() {
     $('#email').blur(validate);
-
     $('#submitButton').click(function(){
         validate();
         return isValid;
