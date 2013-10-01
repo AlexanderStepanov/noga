@@ -27,11 +27,11 @@ html {
 {
     height: 100%;
     width: 100%;
-
+position: fixed;
     /*left: -50%;*/
 
     background-image: url("/img/backgroud.jpg");
-    position:  absolute;
+    /*position:  absolute;*/
     background-size: cover;
     background-repeat: no-repeat;
     /*background-size: 100%;*/
@@ -50,7 +50,7 @@ html {
 
 #second{
     z-index: -1;
-    height: 50%;
+    height: 100%;
     width: 100%;
     position: absolute;
     min-height: 50%;
@@ -80,9 +80,9 @@ html {
     background-repeat: no-repeat;
 }
 
-/*#second img{*/
-    /*opacity: 0.34;*/
-/*}*/
+#second img{
+    opacity: 0.34;
+}
 
 #second #secondLeftBlock{
     position: absolute;

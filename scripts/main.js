@@ -30,23 +30,12 @@ $(document).ready(function() {
         return isValid;
     });
 
-    var backgroudContainerHeight = null;
-
     $(window).scroll(function() {
         var scrolledPixels = document.body.scrollTop;
         if(scrolledPixels > 2000) return;
 
-        var firstHeight = $("#first").height() / 2;
+        var firstHeight = $("#first").height() /1.5;
         var opacity = 1 - scrolledPixels / firstHeight;
         $("#backgroundContainer").css("opacity", opacity);
-
-        if(backgroudContainerHeight == null){
-            backgroudContainerHeight = parseInt($("#backgroundContainer").css("height").replace("px", ""));
-        }
-
-        var height = backgroudContainerHeight + scrolledPixels + 100;
-//alert(height);
-        $("#backgroundContainer").css("height", height + "px");
-        //alert(document.body.scrollTop);
     });
 });
