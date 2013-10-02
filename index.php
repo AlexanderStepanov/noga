@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<meta charset="UTF-8" />
+<meta charset="UTF-8" xmlns="http://www.w3.org/1999/html"/>
 
 <html>
 <head>
     <script type="text/javascript" src="scripts/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="/scripts/main.js"></script>
-
+    <script type="text/javascript" src="/jquery.onepage-scroll.js" ></script>
     <link type="text/css" rel="stylesheet" href="style.css" />
-
+    <link type="text/css" rel="stylesheet" href="onepage-scroll.css" />
     <title>
         Landing
     </title>
 </head>
 <body>
 
+<div id="backgroundContainer"></div>
 
-<div id="first">
-    <div id="backgroundContainer"></div>
+
+<div class="main" style="position: relative;">
+
+
+<section id="first" data-index="1">
+
     <?php
 
     if (isset( $_POST['email']) && $_POST['email'] != '')
@@ -57,31 +62,30 @@
     }
     ?>
 
-<div id="second">
-    <div id="secondLeftBlock">
-        <h2>Раньше</h2>
-        <p>Учитесь на чужих ошибках, пацанчики.
-            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-            Aenean sollicitudin lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
-            elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
-        <img id="labyrinthLeft" src="/img/labyrinth.png" />
-        <h1>03:15</h1>
-    </div>
-    <div id="secondRightBlock">
-        <h2>Теперь</h2>
-        <p>Учитесь на чужих ошибках, пацанчики.
-            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-            Aenean sollicitudin lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
-            elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
-        <img id="labyrinthRight" src="/img/labyrinth.png" />
-        <h1>00:01</h1>
-    </div>
 
-</div>
-</div>
+</section>
+    <section id="second" data-index="2">
+        <div id="secondLeftBlock">
+            <h2>Раньше</h2>
+            <p>Учитесь на чужих ошибках, пацанчики.
+                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                Aenean sollicitudin lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
+                elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+            <img id="labyrinthLeft" src="/img/labyrinth.png" />
+            <h1>03:15</h1>
+        </div>
+        <div id="secondRightBlock">
+            <h2>Теперь</h2>
+            <p>Учитесь на чужих ошибках, пацанчики.
+                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                Aenean sollicitudin lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
+                elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+            <img id="labyrinthRight" src="/img/labyrinth.png" />
+            <h1>00:01</h1>
+        </div>
 
-
-    <div id="third">
+    </section>
+    <section id="third" data-index="3">
         <div id="lapTopContainer">
             <img src="img/lapTop.png">
         </div>
@@ -93,8 +97,8 @@
                 Учитесь на чужих ошибках и тд...
             </h3>
         </div>
-    </div>
-    <div id="fourth">
+    </section>
+    <section id="fourth" data-index="4">
         <?php
         if (isset( $_POST['email']) && $_POST['email'] != '')
         {
@@ -144,7 +148,10 @@
         <?php
         }
         ?>
-    </div>
+    </section>
+
+
+</div>
 </body>
 </html>
 
