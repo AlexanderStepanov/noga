@@ -16,13 +16,27 @@
         });
 
         function startMoving() {
-            setCoordinates(100, 100);
+         setCoordinates(100, 100);
 
-            for(var i = 0; i <= 360 * 3; i++){
-                setAngle(i, 100, 100);
+            setAngle(0, 100, 100);
+//            setAngle(1, 100, 100);
+//            setAngle(2, 100, 100);
+//            setAngle(3, 100, 100);
+//            setAngle(4, 100, 100);
+//            setAngle(5, 100, 100);
+//            setAngle(6, 100, 100);
+//            setAngle(7, 100, 100);
 
+            setAngle(100, 100, 100);
+            setAngle(110, 100, 100);
+            setAngle(120, 100, 100);
+            setAngle(0, 100, 100);
 
-            }
+            setAngle(120, 100, 100);
+            setAngle(0, 100, 100);
+            //            for(var i = 0; i <= 360 * 3; i++){
+//                setAngle(i, 100, 100);
+//            }
 
 
         }
@@ -80,13 +94,15 @@
             if(_isMoving || _moveQueue.length == 0) return;
 
             _nextPoint = dequeue();
-            if(_nextPoint.x == _shipX && _nextPoint.y == _shipY){
-                if(_moveQueue.length == 0) return;
-
-                _nextPoint = dequeue();
-            }
+//            if(_nextPoint.x == _shipX && _nextPoint.y == _shipY){
+//                if(_moveQueue.length == 0) return;
+//
+//                _nextPoint = dequeue();
+//            }
 
             var differenceBetweenXs = Math.abs(_nextPoint.x - _shipX);
+
+
             var differenceBetweenYs = Math.abs(_nextPoint.y - _shipY);
             var allIterations = differenceBetweenXs > differenceBetweenYs ?
                     differenceBetweenXs : differenceBetweenYs;
@@ -98,6 +114,8 @@
             while(iterations != allIterations){
                 iterations++;
                 _delay += 3;
+
+                $("#log").append("test<br/>");
 
                 setTimeout(function(){
                     MoveToNextPoint(oneIterationXStep, oneIterationYStep);
@@ -139,6 +157,10 @@
             var result = _moveQueue[0];
             _moveQueue.splice(0, 1);
 
+            if(result.x == _shipX && result.y == _shipY){
+                return dequeue();
+            }
+
             return result;
         }
 
@@ -153,5 +175,9 @@
         <!--<canvas id="myCanvas" width="288" height="288" />-->
         <img src="img/labyrinth.png" />
         <div id="myDiv" style="width: 30px; height: 30px; background-color: black; position: absolute;"></div>
+
+        <div id="log">
+
+        </div>
     </body>
 </html>

@@ -51,6 +51,8 @@
                         <input id="email" value="" name="email" placeholder="Your@mail.com">
                     </div>
 
+
+
                     <input id="submitButton" type= "Submit" Name = "Submit1" VALUE = "Подписаться">
 
                     <p><span id="valid"></span></p>
@@ -62,24 +64,32 @@
     }
     ?>
 
+    <div id="socialButtons">
+        <script type="text/javascript">(function() {
+                if (window.pluso)if (typeof window.pluso.start == "function") return;
+                if (window.ifpluso==undefined) { window.ifpluso = 1;
+                    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                    var h=d[g]('body')[0];
+                    h.appendChild(s);
+                }})();</script>
+        <div class="pluso" data-background="transparent" data-options="medium,round,line,horizontal,counter,theme=04" data-services="vkontakte,facebook,twitter"></div>
+    </div>
 
 </section>
     <section id="second" data-index="2">
         <div id="secondLeftBlock">
-            <h2>Раньше</h2>
-            <p>Учитесь на чужих ошибках, пацанчики.
-                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                Aenean sollicitudin lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
-                elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+            <h2>Проблема</h2>
+            <p>Мы тратим тысячи часов<br>
+                на поиск того, что уже найдено, проверено и оценено.</p>
             <img id="labyrinthLeft" src="/img/labyrinth.png" />
             <h1>03:15</h1>
         </div>
         <div id="secondRightBlock">
-            <h2>Теперь</h2>
-            <p>Учитесь на чужих ошибках, пацанчики.
-                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                Aenean sollicitudin lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
-                elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+            <h2>Решение</h2>
+            <p>Теперь можно<br> просто телепортироваться
+                прямо на лучшую страницу.</p>
             <img id="labyrinthRight" src="/img/labyrinth.png" />
             <h1>00:01</h1>
         </div>
@@ -94,7 +104,9 @@
                 Как работает
             </h3>
             <h3 id="textStyle">
-                Учитесь на чужих ошибках и тд...
+                На каждой странице в интернете размещаются кнопки Like Dislike.
+                И чудо-кнопка Star, при нажатии на которую ты сразу попадаешь на
+                лучшую страницу по этой тематике.
             </h3>
         </div>
     </section>

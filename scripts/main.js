@@ -32,7 +32,8 @@ $(document).ready(function() {
     });
 
     $(window).scroll(function() {
-
+//        var scrolledPixels = document.body.scrollTop;
+//        alert(scrolledPixels);
     });
 
     $(document).bind('mousewheel DOMMouseScroll', function(event) {
