@@ -10,15 +10,22 @@
         var _isMoving = false;
         var _delay = 0;
         var _moveQueue = new Array();
+        var _circleCenterX;
+        var _circleCenterY = _circleCenterX = 134;
 
         $(document).ready(function() {
             startMoving();
         });
 
         function startMoving() {
-         setCoordinates(100, 100);
+         setCoordinates(0, 0);
 
-            setAngle(0, 100, 100);
+            setAngle(0);
+            setAngle(1);
+//            setAngle(2);
+//            setAngle(3);
+//            setAngle(4);
+//            setAngle(5);
 //            setAngle(1, 100, 100);
 //            setAngle(2, 100, 100);
 //            setAngle(3, 100, 100);
@@ -27,13 +34,13 @@
 //            setAngle(6, 100, 100);
 //            setAngle(7, 100, 100);
 
-            setAngle(100, 100, 100);
-            setAngle(110, 100, 100);
-            setAngle(120, 100, 100);
-            setAngle(0, 100, 100);
+//            setAngle(100, 100, 100);
+//            setAngle(110, 100, 100);
+//            setAngle(120, 100, 100);
+//            setAngle(0, 100, 100);
 
-            setAngle(120, 100, 100);
-            setAngle(0, 100, 100);
+//            setAngle(120, 100, 100);
+//            setAngle(0, 100, 100);
             //            for(var i = 0; i <= 360 * 3; i++){
 //                setAngle(i, 100, 100);
 //            }
@@ -66,8 +73,8 @@
 
 
 
-        function setAngle(angle, x, y){
-            var radius = 50;
+        function setAngle(angle){
+            var radius = 134;
             var alpha = Math.PI * 2;
             angle *= Math.PI / 180;
             var theta = alpha;
@@ -76,8 +83,8 @@
             var pointy  = Math.floor(Math.sin( theta + angle) * radius );
 
 
-            var xx = pointx + x;
-            var yy = pointy + y;
+            var xx = pointx + _circleCenterX;
+            var yy = pointy + _circleCenterY;
 
             moveTo(xx, yy);
         }
@@ -174,7 +181,7 @@
     <body>
         <!--<canvas id="myCanvas" width="288" height="288" />-->
         <img src="img/labyrinth.png" />
-        <div id="myDiv" style="width: 30px; height: 30px; background-color: black; position: absolute;"></div>
+        <div id="myDiv" style="background-image: url('img/man.png'); width: 8px; height: 21px; position: absolute;"></div>
 
         <div id="log">
 
