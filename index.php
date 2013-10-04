@@ -51,8 +51,6 @@
                         <input id="email" value="" name="email" placeholder="Your@mail.com">
                     </div>
 
-
-
                     <input id="submitButton" type= "Submit" Name = "Submit1" VALUE = "Подписаться">
 
                     <p><span id="valid"></span></p>

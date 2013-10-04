@@ -198,6 +198,7 @@ position: fixed;
 }
 
 #submitButton{
+    outline: 0;
     color: #5dc6a5;
     font-size: 11pt;
     background-image: url("/img/roundedButton.png");
@@ -207,6 +208,18 @@ position: fixed;
     background-color: transparent;
     position: absolute;
     left: 350px;
+}
+#submitButton:hover
+{
+    outline: 0;
+    color: white;
+    background-image: url("/img/submitButtonHover.png");
+}
+#submitButton:active
+{
+    outline: 0;
+    color: white;
+    background-image: url("/img/submitButtonIsPressed.png");
 }
 
 #submitButtonGreen{
@@ -220,6 +233,19 @@ position: fixed;
     position: absolute;
     left: 350px;
 }
+#submitButtonGreen:hover
+{
+    outline: 0;
+    color: white;
+    background-image: url("/img/submitButtonHover.png");
+}
+#submitButtonGreen:active
+{
+    outline: 0;
+    color: white;
+    background-image: url("/img/submitButtonIsPressed.png");
+}
+
 
 #lapTopContainer{
     left: 50%;
