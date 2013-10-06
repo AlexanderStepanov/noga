@@ -10,15 +10,72 @@
         var _isMoving = false;
         var _delay = 0;
         var _moveQueue = new Array();
-        var _circleCenterX;
-        var _circleCenterY = _circleCenterX = 134;
+        var _circleCenterX = 136;
+        var _circleCenterY = 130;
+        var _angleDelay = 30;
+        var _currentAngle = 272;
+        var _radius = 118;
 
         $(document).ready(function() {
             startMoving();
         });
 
         function startMoving() {
-            setCoordinates(134, 134);
+            setCoordinates(138, 0);
+            moveTo(138, 10);
+
+
+
+            for(var i = 0; i < 10; i++){
+                setAngle(95);
+                setAngle(165);
+                moveTo(50, 148);
+                _radius = 88;
+                setAngle(260);
+                setAngle(235);
+                moveTo(100, 80);
+                _radius = 60;
+                setAngle(90);
+                moveTo(140, 216);
+                _radius = 88;
+                setAngle(125);
+                setAngle(10);
+                setAngle(90);
+                moveTo(136, 192);
+                _radius = 60;
+                setAngle(375);
+                setAngle(325);
+                moveTo(164, 109);
+
+                _radius = 32;
+                setAngle(20);
+                setAngle(325);
+                moveTo(188, 98);
+                _radius = 60;
+                setAngle(90);
+                moveTo(140, 216);
+                _radius = 88;
+                setAngle(125);
+                setAngle(10);
+                setAngle(90);
+                moveTo(136, 192);
+                _radius = 60;
+                setAngle(240);
+                moveTo(83, 63);
+                _radius = 88;
+                setAngle(180);
+                moveTo(20, 193);
+                _radius = 118;
+                setAngle(100);
+                setAngle(270, startMoving);
+            }
+
+
+//            setAngle(272);
+//            setAngle(290);
+//moveTo(0,0);
+
+//            moveTo(0, 0);
 
 //            setCoordinates(46, 235);
 //            moveTo(47, 236);
@@ -27,46 +84,50 @@
 //            moveTo(228, 230);
 
 //return;
-            var tempDelay = 30;
+//            var tempDelay = 30;
 
-            for(var i = 0; i < 360; i++){
-                setTimeout(function(x)
-                            {
-                                return function(){
-                                    setAngle(x);
-                                }
-                            }(i)
-                        , tempDelay);
+            //setAngle(-90);
 
-                tempDelay += 30;
-
+//            for(var i = 0; i < 360; i++){
+//
+//
 //                setAngle(i);
+//
+//            }
+        }
 
+
+
+        function setAngle(angle, onCompleted){
+            var angleToSet = 0;// = angle;
+
+            while(_currentAngle != angle){
+                if(_currentAngle > angle) {
+                    _currentAngle--;
+                }
+                else{
+                    _currentAngle++;
+                }
+                angleToSet = _currentAngle;
+                var alpha = Math.PI * 2;
+                angleToSet *= Math.PI / 180;
+                var theta = alpha;
+
+                var pointx  =  Math.floor(Math.cos( theta + angleToSet) * _radius);
+                var pointy  = Math.floor(Math.sin( theta + angleToSet) * _radius );
+
+                var xx = pointx + _circleCenterX;
+                var yy = pointy + _circleCenterY;
+
+                moveTo(xx, yy, onCompleted);
             }
         }
 
-        function setAngle(angle){
-            var radius = 134;
-            var alpha = Math.PI * 2;
-            angle *= Math.PI / 180;
-            var theta = alpha;
-
-            var pointx  =  Math.floor(Math.cos( theta + angle) * radius);
-            var pointy  = Math.floor(Math.sin( theta + angle) * radius );
-
-
-            var xx = pointx + _circleCenterX;
-            var yy = pointy + _circleCenterY;
-
-//            alert("x:" + xx + " y:" + yy);
-
-            moveTo(xx, yy);
-        }
-
-        function moveTo(x, y){
+        function moveTo(x, y, onCompleted){
             var point = new Object();
             point.x = Math.round(x);
             point.y = Math.round(y);
+            point.onCompleted = onCompleted;
             _moveQueue.push(point);
 
             //alert(_delayX);
@@ -81,38 +142,41 @@
 
             if(_isMoving || _moveQueue.length == 0) return;
 
-            var nextPoint = dequeue();
-            if(nextPoint == undefined) {
-                finishMove();
-                return;
-            }
-            _nextPoint = nextPoint;
+            setTimeout(function(){
+                var nextPoint = dequeue();
+                if(nextPoint == undefined) {
+                    finishMove();
+                    return;
+                }
+                _nextPoint = nextPoint;
 
 
-            console.log("moving to " + _nextPoint.x + " " + _nextPoint.y);
+                console.log("moving to " + _nextPoint.x + " " + _nextPoint.y);
 
-            var differenceBetweenXs = Math.abs(_nextPoint.x - _shipX);
-            var differenceBetweenYs = Math.abs(_nextPoint.y - _shipY);
+                var differenceBetweenXs = Math.abs(_nextPoint.x - _shipX);
+                var differenceBetweenYs = Math.abs(_nextPoint.y - _shipY);
 
-            var allIterations = differenceBetweenXs > differenceBetweenYs ?
-                    differenceBetweenXs : differenceBetweenYs;
-            var oneIterationXStep = differenceBetweenXs / allIterations;
-            var oneIterationYStep = differenceBetweenYs / allIterations;
+                var allIterations = differenceBetweenXs > differenceBetweenYs ?
+                        differenceBetweenXs : differenceBetweenYs;
+                var oneIterationXStep = differenceBetweenXs / allIterations;
+                var oneIterationYStep = differenceBetweenYs / allIterations;
 
-            var iterations = 0;
+                var iterations = 0;
 
-            _delay = 3;
+                _delay = 60;
 
-            while(iterations < allIterations){
-                iterations++;
+                while(iterations < allIterations){
+                    iterations++;
 
-                _delay += 3;
+                    _delay += 60;
 //                $("#log").append("test<br/>");
 
-                setTimeout(function(){
-                    MoveToNextPoint(oneIterationXStep, oneIterationYStep);
-                }, _delay);
-            }
+                    setTimeout(function(){
+                        MoveToNextPoint(oneIterationXStep, oneIterationYStep);
+                    }, _delay);
+                }
+            }, _angleDelay);
+            _angleDelay += 30;
         }
 
 
@@ -133,8 +197,8 @@
             _shipX = x;
             _shipY = y;
 
-            $('#myDiv').css("left", Math.round(x));
-            $('#myDiv').css("top", Math.round(y));
+            $('#myDiv').css("margin-left", Math.round(x));
+            $('#myDiv').css("margin-top", Math.round(y));
         }
 
         function isMovedToEnd(){
@@ -152,6 +216,10 @@
         function finishMove(){
             setCoordinates(_nextPoint.x, _nextPoint.y);
             _isMoving = false;
+            if(_nextPoint.onCompleted != null){
+                _nextPoint.onCompleted();
+            }
+
             moveNext();
         }
 
@@ -175,14 +243,14 @@
         function showLastData(){
             alert("x: " + _shipX + " y: " + _shipY + "\r\n"
                     + "future: x: " + _nextPoint.x + " y: " + _nextPoint.y + "\r\n"
-                    + "real: x: " + $('#myDiv').css("left") + " y: " + $('#myDiv').css("top"));
+                    + "real: x: " + $('#myDiv').css("margin-left") + " y: " + $('#myDiv').css("margin-top"));
         }
     </script>
 </head>
     <body>
         <!--<canvas id="myCanvas" width="288" height="288" />-->
-        <img src="img/labyrinth.png" />
-        <div id="myDiv" style="background-image: url('img/man.png'); width: 8px; height: 21px; position: absolute;"></div>
+        <div id="myDiv" style="background-image: url('img/man.png'); left: 0; top: 0; width: 8px; height: 21px; position: absolute;"></div>
+        <img src="img/labyrinth.png" style="position: absolute;" />
         <input type="button" onclick="showLastData();" value="show data" />
         <div id="log"></div>
     </body>
