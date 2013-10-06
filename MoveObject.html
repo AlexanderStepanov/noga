@@ -18,79 +18,32 @@
         });
 
         function startMoving() {
-         setCoordinates(134, 134);
+            setCoordinates(134, 134);
+
+//            setCoordinates(46, 235);
+//            moveTo(47, 236);
 //
-//            moveTo(268, 133);
-//            moveTo(267, 136);
+//            setCoordinates(227, 227.5);
+//            moveTo(228, 230);
 
-
-            var tempDelay = 3;
-
-//            setTimeout(function(){
-//            for(var i = 0; i < 360; i++){
-//                setTimeout((function(){
-//                      return function(data) { setAngle(data); };
-//                    })(i), tempDelay);
-//
-//                tempDelay += 3;
-//            }
+//return;
+            var tempDelay = 30;
 
             for(var i = 0; i < 360; i++){
-                setTimeout(function(){ alert(i); }, tempDelay);
+                setTimeout(function(x)
+                            {
+                                return function(){
+                                    setAngle(x);
+                                }
+                            }(i)
+                        , tempDelay);
 
-                tempDelay += 3;
+                tempDelay += 30;
+
+//                setAngle(i);
+
             }
-//
-//                delay+=3;
-//            }
-//            },delay);
-
-//            setAngle(1, 100, 100);
-//            setAngle(2, 100, 100);
-//            setAngle(3, 100, 100);
-//            setAngle(4, 100, 100);
-//            setAngle(5, 100, 100);
-//            setAngle(6, 100, 100);
-//            setAngle(7, 100, 100);
-
-//            setAngle(100, 100, 100);
-//            setAngle(110, 100, 100);
-//            setAngle(120, 100, 100);
-//            setAngle(0, 100, 100);
-
-//            setAngle(120, 100, 100);
-//            setAngle(0, 100, 100);
-            //            for(var i = 0; i <= 360 * 3; i++){
-//                setAngle(i, 100, 100);
-//            }
-
-
         }
-
-//        function drawCircle(selector, center, radius, angle, x, y) {
-//            var total = $(selector).length;
-//            var alpha = Math.PI * 2 / total;
-//            angle *= Math.PI / 180;
-//
-//            $(selector).each(function(index) {
-//                var theta = alpha * index;
-//                var pointx  =  Math.floor(Math.cos( theta + angle) * radius);
-//                var pointy  = Math.floor(Math.sin( theta + angle) * radius );
-//
-//                $(this).css('margin-left', pointx + x + 'px');
-//                $(this).css('margin-top', pointy + y + 'px');
-//            });
-//        }
-//
-//        function moveByCircle(){
-//            var angle = 90;
-//            drawCircle('.box', 50, 200, angle, 310, 220);
-//            $("#movebtn").on('click', function() {
-//                angle = angle + 5;
-//                drawCircle('.box', 50, 200, angle, 310, 220);
-//            });
-
-
 
         function setAngle(angle){
             var radius = 134;
@@ -110,9 +63,6 @@
             moveTo(xx, yy);
         }
 
-//        var _delayX = 0;
-
-
         function moveTo(x, y){
             var point = new Object();
             point.x = Math.round(x);
@@ -126,10 +76,20 @@
 
         function moveNext(){
 
+            //debugger;
+//            console.log("entering moveNext");
+
             if(_isMoving || _moveQueue.length == 0) return;
 
-            _nextPoint = dequeue();
-//            _delayX += 3;
+            var nextPoint = dequeue();
+            if(nextPoint == undefined) {
+                finishMove();
+                return;
+            }
+            _nextPoint = nextPoint;
+
+
+            console.log("moving to " + _nextPoint.x + " " + _nextPoint.y);
 
             var differenceBetweenXs = Math.abs(_nextPoint.x - _shipX);
             var differenceBetweenYs = Math.abs(_nextPoint.y - _shipY);
@@ -140,11 +100,10 @@
             var oneIterationYStep = differenceBetweenYs / allIterations;
 
             var iterations = 0;
-//            setTimeout(function(){
 
             _delay = 3;
 
-            while(iterations != allIterations){
+            while(iterations < allIterations){
                 iterations++;
 
                 _delay += 3;
@@ -154,9 +113,6 @@
                     MoveToNextPoint(oneIterationXStep, oneIterationYStep);
                 }, _delay);
             }
-
-//            }, _delay);
-
         }
 
 
@@ -177,8 +133,8 @@
             _shipX = x;
             _shipY = y;
 
-            $('#myDiv').css("left", x);
-            $('#myDiv').css("top", y);
+            $('#myDiv').css("left", Math.round(x));
+            $('#myDiv').css("top", Math.round(y));
         }
 
         function isMovedToEnd(){
@@ -200,8 +156,9 @@
         }
 
         function dequeue(){
-            _isMoving = true;
             var result = _moveQueue[0];
+            if(result == undefined) return undefined;
+            _isMoving = true;
             _moveQueue.splice(0, 1);
 
             if(result.x == _shipX && result.y == _shipY){
@@ -216,8 +173,9 @@
         }
 
         function showLastData(){
-            alert("x: " + _shipX + " y: " + _shipY + "\r\n" + "future: x: " + _nextPoint.x + " y: " + _nextPoint.y);
-//            alert();
+            alert("x: " + _shipX + " y: " + _shipY + "\r\n"
+                    + "future: x: " + _nextPoint.x + " y: " + _nextPoint.y + "\r\n"
+                    + "real: x: " + $('#myDiv').css("left") + " y: " + $('#myDiv').css("top"));
         }
     </script>
 </head>
@@ -225,11 +183,7 @@
         <!--<canvas id="myCanvas" width="288" height="288" />-->
         <img src="img/labyrinth.png" />
         <div id="myDiv" style="background-image: url('img/man.png'); width: 8px; height: 21px; position: absolute;"></div>
-        <input type="button" title="SHOW DATA" onclick="showLastData();" />
-        <div id="log">
-
-        </div>
-
-
+        <input type="button" onclick="showLastData();" value="show data" />
+        <div id="log"></div>
     </body>
 </html>
