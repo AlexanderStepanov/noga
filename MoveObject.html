@@ -18,14 +18,33 @@
         });
 
         function startMoving() {
-         setCoordinates(0, 0);
+         setCoordinates(134, 134);
+//
+//            moveTo(268, 133);
+//            moveTo(267, 136);
 
-            setAngle(0);
-            setAngle(1);
-//            setAngle(2);
-//            setAngle(3);
-//            setAngle(4);
-//            setAngle(5);
+
+            var tempDelay = 3;
+
+//            setTimeout(function(){
+//            for(var i = 0; i < 360; i++){
+//                setTimeout((function(){
+//                      return function(data) { setAngle(data); };
+//                    })(i), tempDelay);
+//
+//                tempDelay += 3;
+//            }
+
+            for(var i = 0; i < 360; i++){
+                setTimeout(function(){ alert(i); }, tempDelay);
+
+                tempDelay += 3;
+            }
+//
+//                delay+=3;
+//            }
+//            },delay);
+
 //            setAngle(1, 100, 100);
 //            setAngle(2, 100, 100);
 //            setAngle(3, 100, 100);
@@ -86,49 +105,61 @@
             var xx = pointx + _circleCenterX;
             var yy = pointy + _circleCenterY;
 
+//            alert("x:" + xx + " y:" + yy);
+
             moveTo(xx, yy);
         }
 
+//        var _delayX = 0;
+
+
         function moveTo(x, y){
             var point = new Object();
-            point.x = x;
-            point.y = y;
+            point.x = Math.round(x);
+            point.y = Math.round(y);
             _moveQueue.push(point);
+
+            //alert(_delayX);
             moveNext();
+
         }
 
         function moveNext(){
+
             if(_isMoving || _moveQueue.length == 0) return;
 
             _nextPoint = dequeue();
-//            if(_nextPoint.x == _shipX && _nextPoint.y == _shipY){
-//                if(_moveQueue.length == 0) return;
-//
-//                _nextPoint = dequeue();
-//            }
+//            _delayX += 3;
 
             var differenceBetweenXs = Math.abs(_nextPoint.x - _shipX);
-
-
             var differenceBetweenYs = Math.abs(_nextPoint.y - _shipY);
+
             var allIterations = differenceBetweenXs > differenceBetweenYs ?
                     differenceBetweenXs : differenceBetweenYs;
             var oneIterationXStep = differenceBetweenXs / allIterations;
             var oneIterationYStep = differenceBetweenYs / allIterations;
-            var iterations = 0;
 
-            _delay = 0;
+            var iterations = 0;
+//            setTimeout(function(){
+
+            _delay = 3;
+
             while(iterations != allIterations){
                 iterations++;
-                _delay += 3;
 
-                $("#log").append("test<br/>");
+                _delay += 3;
+//                $("#log").append("test<br/>");
 
                 setTimeout(function(){
                     MoveToNextPoint(oneIterationXStep, oneIterationYStep);
                 }, _delay);
             }
+
+//            }, _delay);
+
         }
+
+
 
         function MoveToNextPoint(oneIterationXStep, oneIterationYStep){
             _shipX = makeCloser(_shipX, _nextPoint.x, oneIterationXStep);
@@ -151,10 +182,19 @@
         }
 
         function isMovedToEnd(){
-            return _shipX == _nextPoint.x || _shipY == _nextPoint.y;
+            if(_shipX == _nextPoint.x){
+                if(_shipY + 1 == _nextPoint.y) return true;
+            }
+
+            if(_shipY == _nextPoint.y){
+                if(_shipX + 1 == _nextPoint.x) return true;
+            }
+
+            return Math.ceil(_shipX) >= _nextPoint.x && Math.ceil(_shipY) >= _nextPoint.y;
         }
 
         function finishMove(){
+            setCoordinates(_nextPoint.x, _nextPoint.y);
             _isMoving = false;
             moveNext();
         }
@@ -175,16 +215,21 @@
             return current >= mustBe? current - closerValue : current + closerValue;
         }
 
-
+        function showLastData(){
+            alert("x: " + _shipX + " y: " + _shipY + "\r\n" + "future: x: " + _nextPoint.x + " y: " + _nextPoint.y);
+//            alert();
+        }
     </script>
 </head>
     <body>
         <!--<canvas id="myCanvas" width="288" height="288" />-->
         <img src="img/labyrinth.png" />
         <div id="myDiv" style="background-image: url('img/man.png'); width: 8px; height: 21px; position: absolute;"></div>
-
+        <input type="button" title="SHOW DATA" onclick="showLastData();" />
         <div id="log">
 
         </div>
+
+
     </body>
 </html>
