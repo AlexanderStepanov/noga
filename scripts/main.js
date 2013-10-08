@@ -169,7 +169,7 @@ function startMoving() {
     moveTo(92, 72);
     _radius = 60;
     setAngle(90);
-    moveTo(132, 108);
+    moveTo(132, 208);
     _radius = 88;
     setAngle(125);
     setAngle(10);
