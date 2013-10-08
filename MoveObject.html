@@ -7,210 +7,22 @@
     <script type="text/javascript" src="scripts/jquery.onepage-scroll.min.js"></script>
 
     <script type="text/javascript">
-
-
+//    var _currentX = 0;
+//    var _currentY = 0;
+//    var _delay = 100;
+//    var _circleCenterX = 136;
+//    var _circleCenterY = 130;
+//    var _currentAngle = 272;
+//    var _radius = 118;
+//    var _lastPoint = new Object();
         $(document).ready(function() {
             //startMoving();
-        });
-
-        function startMoving() {
             setCoordinates(138, 0);
             moveTo(138, 10);
-
-            setAngle(95);
-            setAngle(165);
-            moveTo(50, 148);
-            _radius = 88;
-            setAngle(260);
-            setAngle(235);
-            moveTo(100, 80);
-            _radius = 60;
-            setAngle(90);
-            moveTo(140, 216);
-            _radius = 88;
-            setAngle(125);
-            setAngle(10);
-            setAngle(90);
-            moveTo(136, 192);
-            _radius = 60;
-            setAngle(375);
-            setAngle(325);
-            moveTo(164, 109);
-
-            _radius = 32;
-            setAngle(20);
-            setAngle(325);
-            moveTo(188, 98);
-            _radius = 60;
-            setAngle(90);
-            moveTo(140, 216);
-            _radius = 88;
-            setAngle(125);
-            setAngle(10);
-            setAngle(90);
-            moveTo(136, 192);
-            _radius = 60;
-            setAngle(240);
-            moveTo(83, 63);
-            _radius = 88;
-            setAngle(180);
-            moveTo(20, 193);
-            _radius = 118;
-            setAngle(100);
-            setAngle(270);
-//            for(var i = 0; i < 1; i++){
-//
-//            }
-        }
-
-        var newDelay = 100;
-
-        function setAngle(angle, onCompleted){
-            var angleToSet = 0;// = angle;
-
-            while(_currentAngle != angle){
-                var iterationStep = _radius < 50 &&
-                        (Math.abs(angle - _currentAngle)) > 1 ? 2 : 1;
-
-                if(_currentAngle > angle) {
-                    _currentAngle -= iterationStep;
-                }
-                else{
-                    _currentAngle += iterationStep;
-                }
-                angleToSet = _currentAngle;
-                var alpha = Math.PI * 2;
-                angleToSet *= Math.PI / 180;
-                var theta = alpha;
-
-                var pointx  =  Math.floor(Math.cos( theta + angleToSet) * _radius);
-                var pointy  = Math.floor(Math.sin( theta + angleToSet) * _radius );
-
-                var xx = pointx + _circleCenterX;
-                var yy = pointy + _circleCenterY;
-
-                setTimeout(function(x, y){
-                    return function(){
-                        setCoordinates(x,y);
-                    } ;
-                }(xx, yy), newDelay);
-
-                newDelay += 30;
-
-                //moveTo(xx, yy, onCompleted);
-            }
-        }
-
-        function moveTo(x, y, onCompleted){
-            var point = new Object();
-            point.x = Math.round(x);
-            point.y = Math.round(y);
-            point.onCompleted = onCompleted;
-            _moveQueue.push(point);
-
-            moveNext();
-        }
-
-        function moveNext(){
-            if(_isMoving || _moveQueue.length == 0) return;
-
-//            setTimeout(function(){
-                var nextPoint = dequeue();
-                if(nextPoint == undefined) {
-                    finishMove();
-                    return;
-                }
-                _nextPoint = nextPoint;
-
-                console.log(new Date() + ": moving to " + _nextPoint.x + " " + _nextPoint.y);
-
-                var differenceBetweenXs = Math.abs(_nextPoint.x - _shipX);
-                var differenceBetweenYs = Math.abs(_nextPoint.y - _shipY);
-
-                var allIterations = differenceBetweenXs > differenceBetweenYs ?
-                        differenceBetweenXs : differenceBetweenYs;
-                var oneIterationXStep = differenceBetweenXs / allIterations;
-                var oneIterationYStep = differenceBetweenYs / allIterations;
-
-                var iterations = 0;
-
-                _delay = 10;
-
-                while(iterations < allIterations){
-                    iterations++;
-
-                    _delay += 10;
-//                $("#log").append("test<br/>");
-
-                    setTimeout(function(){
-                        MoveToNextPoint(oneIterationXStep, oneIterationYStep);
-                    }, _delay);
-                }
-        }
-
-
-
-        function MoveToNextPoint(oneIterationXStep, oneIterationYStep){
-            _shipX = makeCloser(_shipX, _nextPoint.x, oneIterationXStep);
-            _shipY = makeCloser(_shipY, _nextPoint.y, oneIterationYStep);
-
-            setCoordinates(_shipX, _shipY);
-
-            if(isMovedToEnd())
-            {
-                finishMove();
-            }
-        }
-
-        function setCoordinates(x, y){
-            _shipX = x;
-            _shipY = y;
-
-            $('#myDiv').css("margin-left", Math.round(x));
-            $('#myDiv').css("margin-top", Math.round(y));
-        }
-
-        function isMovedToEnd(){
-            if(_shipX == _nextPoint.x){
-                if(_shipY + 1 == _nextPoint.y) return true;
-            }
-
-            if(_shipY == _nextPoint.y){
-                if(_shipX + 1 == _nextPoint.x) return true;
-            }
-
-            return Math.ceil(_shipX) >= _nextPoint.x && Math.ceil(_shipY) >= _nextPoint.y;
-        }
-
-        function finishMove(){
-            setCoordinates(_nextPoint.x, _nextPoint.y);
-            _isMoving = false;
-            if(_nextPoint.onCompleted != null){
-                _nextPoint.onCompleted();
-            }
-
-            moveNext();
-        }
-
-        function dequeue(){
-            var result = _moveQueue[0];
-            if(result == undefined) return undefined;
-            _isMoving = true;
-            _moveQueue.splice(0, 1);
-
-            if(result.x == _shipX && result.y == _shipY){
-                return dequeue();
-            }
-
-            return result;
-        }
-
-        function makeCloser(current, mustBe, closerValue){
-            return current >= mustBe? current - closerValue : current + closerValue;
-        }
+        });
 
         function showLastData(){
-            alert("x: " + _shipX + " y: " + _shipY + "\r\n"
+            alert("x: " + _currentX + " y: " + _currentY + "\r\n"
                     + "future: x: " + _nextPoint.x + " y: " + _nextPoint.y + "\r\n"
                     + "real: x: " + $('#myDiv').css("margin-left") + " y: " + $('#myDiv').css("margin-top"));
         }

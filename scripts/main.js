@@ -1,16 +1,13 @@
 var isValid = false;
 var errorText = "На такой адрес приглашение не придет :)";
-var _shipX = 0;
-var _shipY = 0;
-var _nextPoint = new Object();
-var _isMoving = false;
-var _delay = 0;
-var _moveQueue = new Array();
-var _circleCenterX = 136;
-var _circleCenterY = 130;
-var _angleDelay = 30;
+var _currentX = 0;
+var _currentY = 0;
+var _delay = 100;
+var _circleCenterX = 128;
+var _circleCenterY = 122;
 var _currentAngle = 272;
 var _radius = 118;
+var _lastPoint = new Object();
 
 function validate(){
     var email = $('#email');
@@ -64,15 +61,18 @@ $(document).ready(function() {
 });
 
 
-function setAngle(angle, onCompleted){
+function setAngle(angle, onExecuted){
     var angleToSet = 0;// = angle;
 
     while(_currentAngle != angle){
+        var iterationStep = _radius < 50 &&
+            (Math.abs(angle - _currentAngle)) > 1 ? 2 : 1;
+
         if(_currentAngle > angle) {
-            _currentAngle--;
+            _currentAngle -= iterationStep;
         }
         else{
-            _currentAngle++;
+            _currentAngle += iterationStep;
         }
         angleToSet = _currentAngle;
         var alpha = Math.PI * 2;
@@ -85,7 +85,17 @@ function setAngle(angle, onCompleted){
         var xx = pointx + _circleCenterX;
         var yy = pointy + _circleCenterY;
 
-        moveTo(xx, yy, onCompleted);
+        setTimeout(function(x, y, isLast){
+            return function(){
+                setCoordinates(x,y);
+                if(isLast && onExecuted != null){
+                    onExecuted();
+                }
+            } ;
+        }(xx, yy, _currentAngle == angle), _delay);
+        _lastPoint.x = xx;
+        _lastPoint.y = yy;
+        _delay += 30;
     }
 }
 
@@ -93,103 +103,56 @@ function moveTo(x, y){
     var point = new Object();
     point.x = Math.round(x);
     point.y = Math.round(y);
-    _moveQueue.push(point);
 
-    moveNext();
+    moveNext(point);
 }
 
-function moveNext(){
-    if(_isMoving || _moveQueue.length == 0) return;
+function moveNext(nextPoint){
+    //console.log(new Date() + ": moving to " + nextPoint.x + " " + nextPoint.y);
 
-    setTimeout(function(){
-        var nextPoint = dequeue();
-        if(nextPoint == undefined) {
-            finishMove();
-            return;
-        }
-        _nextPoint = nextPoint;
+    var differenceBetweenXs = Math.abs(nextPoint.x - _lastPoint.x);
+    var differenceBetweenYs = Math.abs(nextPoint.y - _lastPoint.y);
 
+    var allIterations = differenceBetweenXs > differenceBetweenYs ?
+        differenceBetweenXs : differenceBetweenYs;
+    var oneIterationXStep = differenceBetweenXs / allIterations;
+    var oneIterationYStep = differenceBetweenYs / allIterations;
 
-        console.log("moving to " + _nextPoint.x + " " + _nextPoint.y);
+    var iterations = 0;
 
-        var differenceBetweenXs = Math.abs(_nextPoint.x - _shipX);
-        var differenceBetweenYs = Math.abs(_nextPoint.y - _shipY);
+    while(iterations < allIterations){
+        iterations++;
 
-        var allIterations = differenceBetweenXs > differenceBetweenYs ?
-            differenceBetweenXs : differenceBetweenYs;
-        var oneIterationXStep = differenceBetweenXs / allIterations;
-        var oneIterationYStep = differenceBetweenYs / allIterations;
+        setTimeout(function(xStep, yStep, nPoint){
+            return function(){ MoveToNextPoint(xStep, yStep, nPoint);}
+        }(oneIterationXStep, oneIterationYStep, nextPoint), _delay);
 
-        var iterations = 0;
-
-        _delay = 60;
-
-        while(iterations < allIterations){
-            iterations++;
-
-            _delay += 60;
-//                $("#log").append("test<br/>");
-
-            setTimeout(function(){
-                MoveToNextPoint(oneIterationXStep, oneIterationYStep);
-            }, _delay);
-        }
-    }, _angleDelay);
-    _angleDelay += 30;
-}
-
-
-
-function MoveToNextPoint(oneIterationXStep, oneIterationYStep){
-    _shipX = makeCloser(_shipX, _nextPoint.x, oneIterationXStep);
-    _shipY = makeCloser(_shipY, _nextPoint.y, oneIterationYStep);
-
-    setCoordinates(_shipX, _shipY);
-
-    if(isMovedToEnd())
-    {
-        finishMove();
+        _delay += 30;
     }
+}
+
+
+
+function MoveToNextPoint(oneIterationXStep, oneIterationYStep, nextPoint){
+    var previousX = _currentX;
+    var previousY = _currentY;
+    _currentX = makeCloser(_currentX, nextPoint.x, oneIterationXStep);
+    _currentY = makeCloser(_currentY, nextPoint.y, oneIterationYStep);
+
+//            console.log("MoveToNextPoint: oneIterationXStep: " + oneIterationXStep +
+//            "; oneIterationYStep: " + oneIterationYStep + "; nextPoint.x: " + nextPoint.x +
+//            "; nextPoint.y: " + nextPoint.y + "; previousX: " + previousX +
+//            "; previousY: " + previousY + "; currentX: " + _currentX + "; currentY: " + _currentY);
+
+    setCoordinates(_currentX, _currentY);
 }
 
 function setCoordinates(x, y){
-    _shipX = x;
-    _shipY = y;
+    _currentX = x;
+    _currentY = y;
 
     $('#myDiv').css("margin-left", Math.round(x));
     $('#myDiv').css("margin-top", Math.round(y));
-}
-
-function isMovedToEnd(){
-    if(_shipX == _nextPoint.x){
-        if(_shipY + 1 == _nextPoint.y) return true;
-    }
-
-    if(_shipY == _nextPoint.y){
-        if(_shipX + 1 == _nextPoint.x) return true;
-    }
-
-    return Math.ceil(_shipX) >= _nextPoint.x && Math.ceil(_shipY) >= _nextPoint.y;
-}
-
-function finishMove(){
-    setCoordinates(_nextPoint.x, _nextPoint.y);
-    _isMoving = false;
-
-    moveNext();
-}
-
-function dequeue(){
-    var result = _moveQueue[0];
-    if(result == undefined) return undefined;
-    _isMoving = true;
-    _moveQueue.splice(0, 1);
-
-    if(result.x == _shipX && result.y == _shipY){
-        return dequeue();
-    }
-
-    return result;
 }
 
 function makeCloser(current, mustBe, closerValue){
@@ -197,48 +160,47 @@ function makeCloser(current, mustBe, closerValue){
 }
 
 function startMoving() {
-    setCoordinates(138, 0);
-    moveTo(138, 10);
-
     setAngle(95);
     setAngle(165);
-    moveTo(50, 148);
+    moveTo(42, 140);
     _radius = 88;
     setAngle(260);
     setAngle(235);
-    moveTo(100, 80);
+    moveTo(92, 72);
     _radius = 60;
     setAngle(90);
-    moveTo(140, 216);
+    moveTo(132, 108);
     _radius = 88;
     setAngle(125);
     setAngle(10);
     setAngle(90);
-    moveTo(136, 192);
+    moveTo(128, 186);
     _radius = 60;
     setAngle(375);
     setAngle(325);
-    moveTo(164, 109);
+    moveTo(156, 101);
 
     _radius = 32;
     setAngle(20);
     setAngle(325);
-    moveTo(188, 98);
+    moveTo(180, 90);
     _radius = 60;
     setAngle(90);
-    moveTo(140, 216);
+    moveTo(132, 208);
     _radius = 88;
     setAngle(125);
     setAngle(10);
     setAngle(90);
-    moveTo(136, 192);
+    moveTo(128, 184);
     _radius = 60;
     setAngle(240);
-    moveTo(83, 63);
+    moveTo(75, 55);
     _radius = 88;
-    setAngle(180);
-    moveTo(20, 193);
+    setAngle(170);
+    moveTo(12, 146);
     _radius = 118;
     setAngle(100);
-    setAngle(270);
+    setAngle(270, startMoving);
+
+    _delay = 100;
 }
