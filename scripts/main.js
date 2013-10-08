@@ -9,6 +9,26 @@ var _currentAngle = 272;
 var _radius = 118;
 var _lastPoint = new Object();
 
+function clearEmailInput()
+{
+    var email = $('#email');
+    var value = email.val();
+    if (value =='')
+    {
+        $('#valid').text('');
+    }
+}
+
+function clearEmailInputSecond()
+{
+    var email = $('#emailSecond');
+    var value = email.val();
+    if (value =='')
+    {
+        $('#validSecond').text('');
+    }
+}
+
 function validate(){
     var email = $('#email');
     var value = email.val();
@@ -26,16 +46,46 @@ function validate(){
     } else {
         isValid = false;
         //email.css({'border' : '1px solid #ff0000'});
-        $('#valid').text(errorText);
+        $('#valid').text('');
+    }
+}
+
+function validateForSecondEmail(){
+    var email = $('#emailSecond');
+    var value = email.val();
+    if(value != '') {
+        var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+        isValid = pattern.test(value);
+        if(isValid){
+            //email.css({'border' : '1px solid #569b44'});
+            $('#validSecond').text('');
+        }
+        if(!isValid){
+            //$(this).css({'border' : '1px solid #ff0000'});
+            $('#validSecond').text(errorText);
+        }
+    } else {
+        isValid = false;
+        //email.css({'border' : '1px solid #ff0000'});
+        $('#validSecond').text('');
     }
 }
 
 $(document).ready(function() {
     $(".main").onepage_scroll();
-
     $('#email').blur(validate);
+    $('#email').on('keyup', clearEmailInput);
+
+    $('#emailSecond').blur(validateForSecondEmail);
+    $('#emailSecond').on('keyup', clearEmailInputSecond);
+
     $('#submitButton').click(function(){
         validate();
+        return isValid;
+    });
+
+    $('#submitButtonSecond').click(function(){
+        validateForSecondEmail();
         return isValid;
     });
 

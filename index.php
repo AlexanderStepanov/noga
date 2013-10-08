@@ -20,62 +20,49 @@
 <div class="main" style="position: relative;">
 
 
-<section id="first" data-index="1">
+    <section id="first" data-index="1">
 
-    <?php
+        <?php
 
-    if (isset( $_POST['email']) && $_POST['email'] != '')
-    {
-        echo "молодец!";
-        $con=mysqli_connect("localhost","root","root","nogaDB");
-        if (mysqli_connect_errno())
+        if (isset( $_POST['email']) && $_POST['email'] != '')
         {
-            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            echo "молодец!";
+            $con=mysqli_connect("localhost","root","root","nogaDB");
+            if (mysqli_connect_errno())
+            {
+                echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            }
+            $sql="INSERT INTO Emails (Date, Email) VALUES (now(),'$_POST[email]')";
+            if (!mysqli_query($con,$sql))
+            {
+                die('Error: ' . mysqli_error($con));
+            }
+            echo "1 record added";
+            mysqli_close($con);
         }
-        $sql="INSERT INTO Emails (Date, Email) VALUES (now(),'$_POST[email]')";
-        if (!mysqli_query($con,$sql))
+        else
         {
-            die('Error: ' . mysqli_error($con));
+            ?>
+            <div id="formContainer">
+                <form name ="form1" method="post" action="index.php">
+                    <div id="wrapper">
+                        <div id="emailContainer">
+                            <input id="email" value="" name="email" placeholder="Your@mail.com">
+                            <div id="emailDiv"/>
+                        </div>
+
+                        <input id="submitButton" type= "Submit" Name = "Submit1" VALUE = "Подписаться">
+
+                        <p><span id="valid"></span></p>
+                    </div>
+                </form>
+            </div>
+
+        <?php
         }
-        echo "1 record added";
-        mysqli_close($con);
-    }
-    else
-    {
         ?>
 
-        <div id="formContainer">
-            <form name ="form1" method="post" action="index.php">
-                <div>
-                    <div id="emailDiv">
-                        <input id="email" value="" name="email" placeholder="Your@mail.com">
-                    </div>
-
-                    <input id="submitButton" type= "Submit" Name = "Submit1" VALUE = "Подписаться">
-
-                    <p><span id="valid"></span></p>
-                </div>
-            </form>
-        </div>
-
-    <?php
-    }
-    ?>
-
-    <div id="socialButtons">
-        <script type="text/javascript">(function() {
-                if (window.pluso)if (typeof window.pluso.start == "function") return;
-                if (window.ifpluso==undefined) { window.ifpluso = 1;
-                    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-                    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
-                    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
-                    var h=d[g]('body')[0];
-                    h.appendChild(s);
-                }})();</script>
-        <div class="pluso" data-background="transparent" data-options="medium,round,line,horizontal,counter,theme=04" data-services="vkontakte,facebook,twitter"></div>
-    </div>
-
-</section>
+    </section>
     <section id="second" data-index="2">
         <div id="secondLeftBlock">
             <h2>Проблема</h2>
@@ -113,57 +100,66 @@
             </h3>
         </div>
     </section>
-    <section id="fourth" data-index="4">
-        <?php
-        if (isset( $_POST['email']) && $_POST['email'] != '')
+<section id="fourth" data-index="4">
+    <div id="subscribeDiv">
+        <h3 id=textHeaderStyle>Подпишись</h3>
+        <h3 id="textStyle">
+            И первым узнаешь об изменении философии поиска
+            И первым узнаешь об изменении философии поиска
+            И первым узнаешь об изменении философии поиска
+            И первым узнаешь об изменении философии поиска
+            И первым узнаешь об изменении философии поиска
+            И первым узнаешь об изменении философии поиска
+        </h3>
+    </div>
+    <?php
+    if (isset( $_POST['emailSecond']) && $_POST['emailSecond'] != '')
+    {
+        echo "молодец!";
+        $con=mysqli_connect("localhost","root","root","nogaDB");
+        if (mysqli_connect_errno())
         {
-            echo "молодец!";
-            $con=mysqli_connect("localhost","root","root","nogaDB");
-            if (mysqli_connect_errno())
-            {
-                echo "Failed to connect to MySQL: " . mysqli_connect_error();
-            }
-            $sql="INSERT INTO Emails (Date, Email) VALUES (now(),'$_POST[email]')";
-            if (!mysqli_query($con,$sql))
-            {
-                die('Error: ' . mysqli_error($con));
-            }
-            echo "1 record added";
-            mysqli_close($con);
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
-        else
+        $sql="INSERT INTO Emails (Date, Email) VALUES (now(),'$_POST[emailSecond]')";
+        if (!mysqli_query($con,$sql))
         {
+            die('Error: ' . mysqli_error($con));
+        }
+        echo "1 record added";
+        mysqli_close($con);
+    }
+    else
+    {
         ?>
-            <div id="subscribeDiv">
-                <h3 id=textHeaderStyle>
-                    Подпишись
-                </h3>
-                <h3 id="textStyle">
-                    И первым узнаешь об изменении философии поиска
-                    И первым узнаешь об изменении философии поиска
-                    И первым узнаешь об изменении философии поиска
-                    И первым узнаешь об изменении философии поиска
-                    И первым узнаешь об изменении философии поиска
-                    И первым узнаешь об изменении философии поиска
-                </h3>
-            </div>
         <div id="secondFormContainer">
-            <form name ="form1" method="post" action="index.php">
-                <div>
-                    <div id="emailSecondDiv">
+            <form name ="form2" method="post" action="index.php">
+                <div id="wrapper">
+                    <div id="emailContainer">
                         <input id="emailSecond" value="" name="email" placeholder="Your@mail.com">
+                        <div id="emailDiv"/>
                     </div>
-
-                    <input id="submitButtonGreen" type= "Submit" Name = "Submit1" VALUE = "Подписаться">
-
-                    <p><span id="valid"></span></p>
+                    <input id="submitButton" type= "Submit" Name = "Submit1" VALUE = "Подписаться">
+                    <p><span id="validSecond"></span></p>
                 </div>
             </form>
         </div>
-        <?php
-        }
-        ?>
-    </section>
+    <?php
+    }
+    ?>
+    <div id="socialButtons">
+        <script type="text/javascript">(function() {
+                if (window.pluso)if (typeof window.pluso.start == "function") return;
+                if (window.ifpluso==undefined) { window.ifpluso = 1;
+                    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                    var h=d[g]('body')[0];
+                    h.appendChild(s);
+                }})();</script>
+        <div class="pluso" data-background="transparent" data-options="medium,round,line,horizontal,counter,theme=04" data-services="vkontakte,facebook,twitter"></div>
+    </div>
+</section>
 
 
 </div>

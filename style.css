@@ -17,18 +17,26 @@ html {
 }
 
 #email::-webkit-input-placeholder {
-    color:    white;
+    color: white;
     opacity: 0.7 !important;
 }
 
 #emailSecond::-webkit-input-placeholder {
-    color: #5dc6a5;
+    color: white;
+    opacity: 0.7 !important;
 }
 
 #valid{
     position: absolute;
-    margin-top: 50px;
-    margin-left: 30px;
+    margin-top: 25px;
+    margin-left: 10px;
+    color: white;
+}
+
+#validSecond{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 10px;
     color: white;
 }
 
@@ -36,7 +44,7 @@ html {
 {
     height: 100%;
     width: 100%;
-position: fixed;
+    position: fixed;
     /*left: -50%;*/
 
     background-image: url("/img/backgroud.jpg");
@@ -129,51 +137,65 @@ position: fixed;
     font-size: 15pt;
 }
 
-#emailDiv{
+#wrapper{
+    position: fixed;
+    width: 320px;
+    height: 43px
+}
+
+#emailContainer {
+    display: inline-block;
+    padding-top: 0px;
+    padding-left: 9px;
+    width:  335px;
+    height: 43px;
+    position: relative;
+}
+#emailDiv {
     background-image: url("/img/inputRoundedBackground.png");
     padding-top: 10px;
     padding-left: 9px;
     display: inline-block;
     background-repeat: no-repeat;
-    width:  335px;
-    height: 43px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
     position: absolute;
-}
 
-#email{
+}
+#email {
     background-color: transparent;
     color: white;
     font-size: 15pt;
     border: none;
     width: 320px;
     height: 25px;
+    margin-top: 10px;
+}
+#email:focus + #emailDiv {
+    background-image: url("/img/focusedTextBoxbackground.png");
 }
 
-#emailSecond{
+#email:focus{
+    outline: 0;
+}
+
+#emailSecond {
     background-color: transparent;
-    color: #5dc6a5;
+    color: white;
     font-size: 15pt;
     border: none;
     width: 320px;
     height: 25px;
+    margin-top: 10px;
 }
-
-#emailSecondDiv{
-    background-image: url("/img/inputBackground.png");
-    padding-top: 10px;
-    padding-left: 9px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    width:  335px;
-    height: 43px;
-    position: absolute;
+#emailSecond:focus + #emailDiv {
+    background-image: url("/img/focusedTextBoxbackground.png");
 }
 
 #emailSecond:focus{
-    outline: 0;
-}
-
-#email:focus{
     outline: 0;
 }
 
@@ -222,30 +244,30 @@ position: fixed;
     background-image: url("/img/submitButtonIsPressed.png");
 }
 
-#submitButtonGreen{
-    color: floralwhite;
+#submitButtonSecond{
+    outline: 0;
+    color: #5dc6a5;
     font-size: 11pt;
-    background-image: url("/img/greenButtonBackground.png");
-    width: 137px;
-    height: 45px;
+    background-image: url("/img/roundedButton.png");
+    width: 135px;
+    height: 43px;
     border: none;
     background-color: transparent;
     position: absolute;
     left: 350px;
 }
-#submitButtonGreen:hover
+#submitButtonSecond:hover
 {
     outline: 0;
     color: white;
     background-image: url("/img/submitButtonHover.png");
 }
-#submitButtonGreen:active
+#submitButtonSecond:active
 {
     outline: 0;
     color: white;
     background-image: url("/img/submitButtonIsPressed.png");
 }
-
 
 #lapTopContainer{
     left: 50%;
@@ -283,8 +305,9 @@ position: fixed;
 }
 
 #socialButtons{
+    margin-top: 50px;
     position: absolute;
-    top:70%;
+    top:100%;
     left:50%;
     width: 170px;
     margin-left: -100px;
@@ -296,4 +319,3 @@ position: fixed;
     width: 268px;
     padding: 0;
 }
-
