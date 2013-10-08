@@ -3,110 +3,80 @@
 
 <head>
     <script type="text/javascript" src="scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="scripts/jquery.onepage-scroll.min.js"></script>
+
     <script type="text/javascript">
-        var _shipX = 0;
-        var _shipY = 0;
-        var _nextPoint = new Object();
-        var _isMoving = false;
-        var _delay = 0;
-        var _moveQueue = new Array();
-        var _circleCenterX = 136;
-        var _circleCenterY = 130;
-        var _angleDelay = 30;
-        var _currentAngle = 272;
-        var _radius = 118;
+
 
         $(document).ready(function() {
-            startMoving();
+            //startMoving();
         });
 
         function startMoving() {
             setCoordinates(138, 0);
             moveTo(138, 10);
 
+            setAngle(95);
+            setAngle(165);
+            moveTo(50, 148);
+            _radius = 88;
+            setAngle(260);
+            setAngle(235);
+            moveTo(100, 80);
+            _radius = 60;
+            setAngle(90);
+            moveTo(140, 216);
+            _radius = 88;
+            setAngle(125);
+            setAngle(10);
+            setAngle(90);
+            moveTo(136, 192);
+            _radius = 60;
+            setAngle(375);
+            setAngle(325);
+            moveTo(164, 109);
 
-
-            for(var i = 0; i < 10; i++){
-                setAngle(95);
-                setAngle(165);
-                moveTo(50, 148);
-                _radius = 88;
-                setAngle(260);
-                setAngle(235);
-                moveTo(100, 80);
-                _radius = 60;
-                setAngle(90);
-                moveTo(140, 216);
-                _radius = 88;
-                setAngle(125);
-                setAngle(10);
-                setAngle(90);
-                moveTo(136, 192);
-                _radius = 60;
-                setAngle(375);
-                setAngle(325);
-                moveTo(164, 109);
-
-                _radius = 32;
-                setAngle(20);
-                setAngle(325);
-                moveTo(188, 98);
-                _radius = 60;
-                setAngle(90);
-                moveTo(140, 216);
-                _radius = 88;
-                setAngle(125);
-                setAngle(10);
-                setAngle(90);
-                moveTo(136, 192);
-                _radius = 60;
-                setAngle(240);
-                moveTo(83, 63);
-                _radius = 88;
-                setAngle(180);
-                moveTo(20, 193);
-                _radius = 118;
-                setAngle(100);
-                setAngle(270, startMoving);
-            }
-
-
-//            setAngle(272);
-//            setAngle(290);
-//moveTo(0,0);
-
-//            moveTo(0, 0);
-
-//            setCoordinates(46, 235);
-//            moveTo(47, 236);
-//
-//            setCoordinates(227, 227.5);
-//            moveTo(228, 230);
-
-//return;
-//            var tempDelay = 30;
-
-            //setAngle(-90);
-
-//            for(var i = 0; i < 360; i++){
-//
-//
-//                setAngle(i);
+            _radius = 32;
+            setAngle(20);
+            setAngle(325);
+            moveTo(188, 98);
+            _radius = 60;
+            setAngle(90);
+            moveTo(140, 216);
+            _radius = 88;
+            setAngle(125);
+            setAngle(10);
+            setAngle(90);
+            moveTo(136, 192);
+            _radius = 60;
+            setAngle(240);
+            moveTo(83, 63);
+            _radius = 88;
+            setAngle(180);
+            moveTo(20, 193);
+            _radius = 118;
+            setAngle(100);
+            setAngle(270);
+//            for(var i = 0; i < 1; i++){
 //
 //            }
         }
 
-
+        var newDelay = 100;
 
         function setAngle(angle, onCompleted){
             var angleToSet = 0;// = angle;
 
             while(_currentAngle != angle){
+                var iterationStep = _radius < 50 &&
+                        (Math.abs(angle - _currentAngle)) > 1 ? 2 : 1;
+
                 if(_currentAngle > angle) {
-                    _currentAngle--;
+                    _currentAngle -= iterationStep;
                 }
                 else{
-                    _currentAngle++;
+                    _currentAngle += iterationStep;
                 }
                 angleToSet = _currentAngle;
                 var alpha = Math.PI * 2;
@@ -119,7 +89,15 @@
                 var xx = pointx + _circleCenterX;
                 var yy = pointy + _circleCenterY;
 
-                moveTo(xx, yy, onCompleted);
+                setTimeout(function(x, y){
+                    return function(){
+                        setCoordinates(x,y);
+                    } ;
+                }(xx, yy), newDelay);
+
+                newDelay += 30;
+
+                //moveTo(xx, yy, onCompleted);
             }
         }
 
@@ -130,19 +108,13 @@
             point.onCompleted = onCompleted;
             _moveQueue.push(point);
 
-            //alert(_delayX);
             moveNext();
-
         }
 
         function moveNext(){
-
-            //debugger;
-//            console.log("entering moveNext");
-
             if(_isMoving || _moveQueue.length == 0) return;
 
-            setTimeout(function(){
+//            setTimeout(function(){
                 var nextPoint = dequeue();
                 if(nextPoint == undefined) {
                     finishMove();
@@ -150,8 +122,7 @@
                 }
                 _nextPoint = nextPoint;
 
-
-                console.log("moving to " + _nextPoint.x + " " + _nextPoint.y);
+                console.log(new Date() + ": moving to " + _nextPoint.x + " " + _nextPoint.y);
 
                 var differenceBetweenXs = Math.abs(_nextPoint.x - _shipX);
                 var differenceBetweenYs = Math.abs(_nextPoint.y - _shipY);
@@ -163,20 +134,18 @@
 
                 var iterations = 0;
 
-                _delay = 60;
+                _delay = 10;
 
                 while(iterations < allIterations){
                     iterations++;
 
-                    _delay += 60;
+                    _delay += 10;
 //                $("#log").append("test<br/>");
 
                     setTimeout(function(){
                         MoveToNextPoint(oneIterationXStep, oneIterationYStep);
                     }, _delay);
                 }
-            }, _angleDelay);
-            _angleDelay += 30;
         }
 
 
@@ -252,6 +221,7 @@
         <div id="myDiv" style="background-image: url('img/man.png'); left: 0; top: 0; width: 8px; height: 21px; position: absolute;"></div>
         <img src="img/labyrinth.png" style="position: absolute;" />
         <input type="button" onclick="showLastData();" value="show data" />
+        <input type="button" onclick="startMoving();" value="start moving" style="position: absolute; top: 500px" />
         <div id="log"></div>
     </body>
 </html>

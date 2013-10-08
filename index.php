@@ -81,7 +81,12 @@
             <h2>Проблема</h2>
             <p>Мы тратим тысячи часов<br>
                 на поиск того, что уже найдено, проверено и оценено.</p>
-            <img id="labyrinthLeft" src="/img/labyrinth.png" />
+            <div id="labyrinthLeft">
+                <div id="myDiv" style="background-image: url('img/man.png'); width: 8px; height: 21px; position: absolute;"></div>
+            </div>
+
+<!--            <img id="labyrinthLeft" src="/img/labyrinth.png" />-->
+
             <h1>03:15</h1>
         </div>
         <div id="secondRightBlock">

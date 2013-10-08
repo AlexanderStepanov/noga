@@ -290,3 +290,11 @@ position: fixed;
     margin-left: -100px;
 }
 
+#labyrinthLeft {
+    background-image: url('/img/labyrinth.png');
+    height: 266px;
+    width: 268px;
+    padding: 0;
+    background-color: red;
+}
+
