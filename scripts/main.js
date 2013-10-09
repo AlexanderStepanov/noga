@@ -29,7 +29,7 @@ function clearEmailInputSecond()
     }
 }
 
-function validate(){
+function validateAndChangeBackGroundBack(){
     var email = $('#email');
     var value = email.val();
     if(value != '') {
@@ -48,9 +48,11 @@ function validate(){
         //email.css({'border' : '1px solid #ff0000'});
         $('#valid').text('');
     }
+    document.getElementById('emailDiv').style.backgroundImage =
+        'url("/img/inputRoundedBackground.png")';
 }
 
-function validateForSecondEmail(){
+function validateForSecondEmailAndChangeBackGroundBack(){
     var email = $('#emailSecond');
     var value = email.val();
     if(value != '') {
@@ -69,23 +71,40 @@ function validateForSecondEmail(){
         //email.css({'border' : '1px solid #ff0000'});
         $('#validSecond').text('');
     }
+
+    document.getElementById('emailDivSecond').style.backgroundImage =
+        'url("/img/inputRoundedBackground.png")';
+}
+function emailChangeBackground()
+{
+    document.getElementById('emailDiv').style.backgroundImage =
+        'url("/img/focusedTextBoxbackground.png")';
+}
+
+function emailSecondChangeBackground()
+{
+    document.getElementById('emailDivSecond').style.backgroundImage =
+        'url("/img/focusedTextBoxbackground.png")';
 }
 
 $(document).ready(function() {
     $(".main").onepage_scroll();
-    $('#email').blur(validate);
+    $('#email').blur(validateAndChangeBackGroundBack);
     $('#email').on('keyup', clearEmailInput);
+    $('#email').focus(emailChangeBackground);
 
-    $('#emailSecond').blur(validateForSecondEmail);
+
+    $('#emailSecond').blur(validateForSecondEmailAndChangeBackGroundBack);
     $('#emailSecond').on('keyup', clearEmailInputSecond);
+    $('#emailSecond').focus(emailSecondChangeBackground);
 
     $('#submitButton').click(function(){
-        validate();
+        validateAndChangeBackGroundBack();
         return isValid;
     });
 
     $('#submitButtonSecond').click(function(){
-        validateForSecondEmail();
+        validateForSecondEmailAndChangeBackGroundBack();
         return isValid;
     });
 

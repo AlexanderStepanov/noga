@@ -28,15 +28,15 @@ html {
 
 #valid{
     position: absolute;
-    margin-top: 25px;
-    margin-left: 10px;
+    margin-top: 50px;
+    margin-left: 30px;
     color: white;
 }
 
 #validSecond{
     position: absolute;
-    margin-top: 25px;
-    margin-left: 10px;
+    margin-top: 50px;
+    margin-left: 30px;
     color: white;
 }
 
@@ -137,12 +137,6 @@ html {
     font-size: 15pt;
 }
 
-#wrapper{
-    position: fixed;
-    width: 320px;
-    height: 43px
-}
-
 #emailContainer {
     display: inline-block;
     padding-top: 0px;
@@ -157,14 +151,22 @@ html {
     padding-left: 9px;
     display: inline-block;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    top: 0;
-    left: 0;
+    width:  335px;
+    height: 43px;
     position: absolute;
-
 }
+
+#emailDivSecond{
+    background-image: url("/img/inputRoundedBackground.png");
+    padding-top: 10px;
+    padding-left: 9px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    width:  335px;
+    height: 43px;
+    position: absolute;
+}
+
 #email {
     background-color: transparent;
     color: white;
@@ -172,10 +174,6 @@ html {
     border: none;
     width: 320px;
     height: 25px;
-    margin-top: 10px;
-}
-#email:focus + #emailDiv {
-    background-image: url("/img/focusedTextBoxbackground.png");
 }
 
 #email:focus{
@@ -189,10 +187,6 @@ html {
     border: none;
     width: 320px;
     height: 25px;
-    margin-top: 10px;
-}
-#emailSecond:focus + #emailDiv {
-    background-image: url("/img/focusedTextBoxbackground.png");
 }
 
 #emailSecond:focus{
@@ -304,7 +298,16 @@ html {
     margin-left: -250px;
 }
 
-#socialButtons{
+#socialButtonsFirst{
+    margin-top: 50px;
+    position: absolute;
+    top:70%;
+    left:50%;
+    width: 170px;
+    margin-left: -100px;
+}
+
+#socialButtonsSecond{
     margin-top: 50px;
     position: absolute;
     top:100%;
@@ -312,6 +315,8 @@ html {
     width: 170px;
     margin-left: -100px;
 }
+
+
 
 .labyrinth {
     background-image: url('/img/labyrinth.png');

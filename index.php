@@ -44,19 +44,29 @@
         {
             ?>
             <div id="formContainer">
-                <form name ="form1" method="post" action="index.php">
-                    <div id="wrapper">
-                        <div id="emailContainer">
-                            <input id="email" value="" name="email" placeholder="Your@mail.com">
-                            <div id="emailDiv"/>
-                        </div>
-
-                        <input id="submitButton" type= "Submit" Name = "Submit1" VALUE = "Подписаться">
-
-                        <p><span id="valid"></span></p>
-                    </div>
+                 <form name ="form1" method="post" action="index.php">
+                      <div>
+                           <div id="emailDiv">
+                                <input id="email" value="" name="email" placeholder="Your@mail.com">
+                           </div>
+                                <input id="submitButton" type= "Submit" Name = "Submit1" VALUE = "Подписаться">
+                                <p><span id="valid"></span></p>
+                      </div>
                 </form>
             </div>
+
+    <div id="socialButtonsFirst">
+             <script type="text/javascript">(function() {
+                                   if (window.pluso)if (typeof window.pluso.start == "function") return;
+                                  if (window.ifpluso==undefined) { window.ifpluso = 1;
+                                           var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                                           s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                                            s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                                           var h=d[g]('body')[0];
+                                            h.appendChild(s);
+                                        }})();</script>
+                    <div class="pluso" data-background="transparent" data-options="medium,round,line,horizontal,counter,theme=04" data-services="vkontakte,facebook,twitter"></div>
+                </div>
 
         <?php
         }
@@ -137,12 +147,11 @@
         ?>
         <div id="secondFormContainer">
             <form name ="form2" method="post" action="index.php">
-                <div id="wrapper">
-                    <div id="emailContainer">
+                <div>
+                    <div id="emailDivSecond">
                         <input id="emailSecond" value="" name="email" placeholder="Your@mail.com">
-                        <div id="emailDiv"/>
                     </div>
-                    <input id="submitButton" type= "Submit" Name = "Submit1" VALUE = "Подписаться">
+                    <input id="submitButtonSecond" type= "Submit" Name = "Submit1" VALUE = "Подписаться">
                     <p><span id="validSecond"></span></p>
                 </div>
             </form>
@@ -150,7 +159,7 @@
     <?php
     }
     ?>
-    <div id="socialButtons">
+    <div id="socialButtonsSecond">
         <script type="text/javascript">(function() {
                 if (window.pluso)if (typeof window.pluso.start == "function") return;
                 if (window.ifpluso==undefined) { window.ifpluso = 1;
