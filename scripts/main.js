@@ -91,23 +91,8 @@ $(document).ready(function() {
 
     startMoving();
 
-    $(window).scroll(function() {
-//        var scrolledPixels = document.body.scrollTop;
-//        alert(scrolledPixels);
-    });
-
-    $(document).bind('mousewheel DOMMouseScroll', function(event) {
-//        event.preventDefault();
-//        var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-//        init_scroll(event, delta);
-//        var scrolledPixels = document.body.scrollTop;
-//        //alert(scrolledPixels);
-//        if(scrolledPixels > 2000) return;
-//
-//        var firstHeight = $("#first").height() /1.5;
-//        var opacity = 1 - scrolledPixels / firstHeight;
-//        $("#backgroundContainer").css("opacity", opacity);
-    });
+    setTeleportStartCoordinates();
+    moveToCenter();
 });
 
 
@@ -201,12 +186,47 @@ function setCoordinates(x, y){
     _currentX = x;
     _currentY = y;
 
-    $('#myDiv').css("margin-left", Math.round(x));
-    $('#myDiv').css("margin-top", Math.round(y));
+    $("#myDiv").css("margin-left", Math.round(x));
+    $("#myDiv").css("margin-top", Math.round(y));
+}
+
+function setCoordinatesFor(elementId, x, y){
+    $(elementId).css("margin-left", Math.round(x));
+    $(elementId).css("margin-top", Math.round(y));
 }
 
 function makeCloser(current, mustBe, closerValue){
     return current >= mustBe? current - closerValue : current + closerValue;
+}
+
+function fadeOutFromStartCompleted(){
+    setCoordinatesFor("#myDivFast", 130, 122);
+    $('#myDivFast').fadeIn(function(){
+        var currentCounter = parseInt($("#fastCounter").text());
+        currentCounter++;
+        $("#fastCounter").text(currentCounter);
+    });
+
+    setTimeout(function(){
+        $('#myDivFast').fadeOut(function(){
+            setTeleportStartCoordinates();
+            $('#myDivFast').fadeIn();
+
+            moveToCenter();
+        });
+
+
+    }, 2000);
+}
+
+function setTeleportStartCoordinates(){
+    setCoordinatesFor("#myDivFast", 130, -20);
+}
+
+function moveToCenter(){
+    setTimeout(function(){
+        $('#myDivFast').fadeOut(fadeOutFromStartCompleted);
+    }, 1000);
 }
 
 function startMoving() {

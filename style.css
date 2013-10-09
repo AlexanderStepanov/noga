@@ -313,7 +313,7 @@ html {
     margin-left: -100px;
 }
 
-#labyrinthLeft {
+.labyrinth {
     background-image: url('/img/labyrinth.png');
     height: 266px;
     width: 268px;

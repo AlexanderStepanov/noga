@@ -68,20 +68,23 @@
             <h2>Проблема</h2>
             <p>Мы тратим тысячи часов<br>
                 на поиск того, что уже найдено, проверено и оценено.</p>
-            <div id="labyrinthLeft">
+            <div class="labyrinth">
                 <div id="myDiv" style="background-image: url('img/man.png'); width: 8px; height: 21px; position: absolute;"></div>
             </div>
 
 <!--            <img id="labyrinthLeft" src="/img/labyrinth.png" />-->
 
-            <h1>03:15</h1>
+            <h1 id="slowCounter">0</h1>
         </div>
         <div id="secondRightBlock">
             <h2>Решение</h2>
             <p>Теперь можно<br> просто телепортироваться
                 прямо на лучшую страницу.</p>
-            <img id="labyrinthRight" src="/img/labyrinth.png" />
-            <h1>00:01</h1>
+            <div class="labyrinth">
+                <div id="myDivFast" style="background-image: url('img/man.png'); width: 8px; height: 21px; position: absolute;"></div>
+            </div>
+
+            <h1 id="fastCounter">0</h1>
         </div>
 
     </section>
