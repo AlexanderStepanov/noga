@@ -21,7 +21,8 @@
 
 
     <section id="first" data-index="1">
-
+    <h2 id="machinesDecideLabel">MACHINES DECIDE WHAT IS GOOD</h2>
+    <h2 id="returnPowerLabel">RETURN POWER TO THE HUMANS</h2>
         <?php
 
         if (isset( $_POST['email']) && $_POST['email'] != '')
@@ -76,8 +77,8 @@
     <section id="second" data-index="2">
         <div id="secondLeftBlock">
             <h2>Проблема</h2>
-            <p>Мы тратим тысячи часов<br>
-                на поиск того, что уже найдено, проверено и оценено.</p>
+            <p>Машины определяют, что хорошо.<br>  Попытки найти <br>лучшую информацию.<br>
+            Вид сверху.</p>
             <div class="labyrinth">
                 <div id="myDiv" style="background-image: url('img/man.png'); width: 8px; height: 21px; position: absolute;"></div>
             </div>
@@ -98,21 +99,25 @@
         </div>
 
     </section>
+
     <section id="third" data-index="3">
-        <div id="lapTopContainer">
-            <img src="img/lapTop.png">
+        <h1 style="text-align: center; margin-top: 30px;">Представь, ты искал что-то в интернете, и перешел по одной из ссылок</h1>
+
+        <div id="clickResultPopup" style="display: none; position: absolute;left:50%; top: 50%; background-color: white; padding: 5px">
+
         </div>
-        <div id="howItWorksContainer">
-            <h3 id=textHeaderStyle>
-                Как работает
-            </h3>
-            <h3 id="textStyle">
-                На каждой странице в интернете размещаются кнопки Like Dislike.
-                И чудо-кнопка Star, при нажатии на которую ты сразу попадаешь на
-                лучшую страницу по этой тематике.
-            </h3>
+
+        <div id="buttonsDescriptionContainer">
+            <img style="position: absolute; margin-left: -180px; margin-top: -40px;" src="/img/buttonsDescription.png" width="500px" />
+            <img style="position: absolute; margin-top: 34px; margin-left: 20px;" src="/img/arrow.png"/>
+        </div>
+
+        <div id="likeButtonsContainer">
+            <img id="likeButton" src="/img/like.png" />
+            <img id="dislikeButton"  src="/img/dislike.png" />
         </div>
     </section>
+
 <section id="fourth" data-index="4">
     <div id="subscribeDiv">
         <h3 id=textHeaderStyle>Подпишись</h3>

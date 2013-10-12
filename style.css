@@ -47,7 +47,7 @@ html {
     position: fixed;
     /*left: -50%;*/
 
-    background-image: url("/img/backgroud.jpg");
+    background-image: url("/img/machines.png");
     /*position:  absolute;*/
     background-size: cover;
     background-repeat: no-repeat;
@@ -79,11 +79,8 @@ html {
     height: 100%;
     width: 100%;
     min-height: 100%;
-    position: absolute;
-    top: 200%;
+    background-image: url("/img/site2.png");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #509f91;
 }
 
 #fourth{
@@ -130,7 +127,7 @@ html {
 }
 
 #second p {
-    width: 310px;
+    width: 400px;
     margin-left: 50%;
     margin-bottom: 30px;
     color: #878787;
@@ -263,33 +260,6 @@ html {
     background-image: url("/img/submitButtonIsPressed.png");
 }
 
-#lapTopContainer{
-    left: 50%;
-    top: 10%;
-    position: absolute;
-    margin-left: -394px;
-}
-
-#textStyle{
-    color: white;
-    font-size: 12pt;
-    margin-top: 15px;
-
-}
-#textHeaderStyle{
-    font-size: 22pt;
-    color: white;
-}
-
-#howItWorksContainer {
-    left: 50%;
-    margin-left: -290px;
-    margin-top: 510px;
-    width: 560px;
-    height: 100px;
-    position: absolute;
-}
-
 #subscribeDiv{
     left: 50%;
     top: 30%;
@@ -323,4 +293,61 @@ html {
     height: 266px;
     width: 268px;
     padding: 0;
+}
+
+#machinesDecideLabel{
+    font-family: langdon;
+    color: white;
+    font-size: 40pt;
+    left: 50%;
+    position: absolute;
+    top: 30px;
+    margin-left: -320px;
+}
+
+#returnPowerLabel{
+    font-family: langdon;
+    color: white;
+    font-size: 40pt;
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    margin-top: -100px;
+    margin-left: -300px;
+}
+
+@font-face {
+    font-family: 'langdon';
+    src: url('/langdon.otf');
+}
+
+#likeButtonsContainer{
+    position: absolute;
+    left: 100%;
+    margin-left: -85px;
+    top:100%;
+    margin-top: -60px;
+}
+
+#likeButtonsContainer img{
+    position: absolute;
+    opacity: 0.7;
+}
+
+#likeButtonsContainer img:hover {
+    opacity: 1;
+}
+
+#dislikeButton{
+    margin-left: 34px;
+    margin-top: 8px;
+}
+
+#buttonsDescriptionContainer{
+    position: absolute;
+    left: 100%;
+    margin-left: -370px;
+    top: 100%;
+    margin-top: -150px;
+
 }

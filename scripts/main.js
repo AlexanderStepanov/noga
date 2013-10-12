@@ -112,6 +112,19 @@ $(document).ready(function() {
 
     setTeleportStartCoordinates();
     moveToCenter();
+
+    $("#likeButton").click(function(){
+        showPopup("Здорово! Ты только что оценил одну из страниц!<br> Теперь мы можем предложить тебе похожие.");
+    });
+
+    $("#dislikeButton").click(function(){
+        showPopup("Ну что же.. теперь мы будем реже предлагать эту страницу другим. Спасибо!");
+    });
+
+    function showPopup(text){
+        $("#clickResultPopup").show();
+        $("#clickResultPopup").html(text);
+    }
 });
 
 
