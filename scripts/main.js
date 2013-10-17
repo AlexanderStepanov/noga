@@ -49,7 +49,7 @@ function validateAndChangeBackGroundBack(){
         $('#valid').text('');
     }
     document.getElementById('emailDiv').style.backgroundImage =
-        'url("/img/inputRoundedBackground.png")';
+        'url("/newImg/staticTextBoxBackground.png")';
 }
 
 function validateForSecondEmailAndChangeBackGroundBack(){
@@ -78,7 +78,10 @@ function validateForSecondEmailAndChangeBackGroundBack(){
 function emailChangeBackground()
 {
     document.getElementById('emailDiv').style.backgroundImage =
-        'url("/img/focusedTextBoxbackground.png")';
+        'url("/newImg/focusedTextBoxBackground.png")';
+
+//    document.getElementById('email::-webkit-input-placeholder').style.color='#55b9dc';
+
 }
 
 function emailSecondChangeBackground()
@@ -88,6 +91,7 @@ function emailSecondChangeBackground()
 }
 
 $(document).ready(function() {
+
     $(".main").onepage_scroll();
     $('#email').blur(validateAndChangeBackGroundBack);
     $('#email').on('keyup', clearEmailInput);

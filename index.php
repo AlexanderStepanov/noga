@@ -9,7 +9,7 @@
     <link type="text/css" rel="stylesheet" href="style.css" />
     <link type="text/css" rel="stylesheet" href="onepage-scroll.css" />
     <title>
-        Landing
+        Ratinator
     </title>
 </head>
 <body>
@@ -18,13 +18,17 @@
 
 
 <div class="main" style="position: relative;">
-
-
     <section id="first" data-index="1">
-    <h2 id="machinesDecideLabel">MACHINES DECIDE WHAT IS GOOD</h2>
-    <h2 id="returnPowerLabel">RETURN POWER TO THE HUMANS</h2>
-        <?php
 
+<!--    <h2 id="machinesDecideLabel">MACHINES DECIDE WHAT IS GOOD</h2>-->
+<!--    <h2 id="returnPowerLabel">RETURN POWER TO THE HUMANS</h2>-->
+
+        <header id="ratinatorLabel">R A T I N A T O R</header>
+<!--        find font-family BlairMdITC TT-->
+        <header id="newMachineDicedeLabel">Машины решают, что хорошо. Вернем власть людям.</header>
+
+
+        <?php
         if (isset( $_POST['email']) && $_POST['email'] != '')
         {
             echo "молодец!";
@@ -74,31 +78,26 @@
         ?>
 
     </section>
-    <section id="second" data-index="2">
-        <div id="secondLeftBlock">
-            <h2>Проблема</h2>
-            <p>Машины определяют, что хорошо.<br>  Попытки найти <br>лучшую информацию.<br>
-            Вид сверху.</p>
-            <div class="labyrinth">
-                <div id="myDiv" style="background-image: url('img/man.png'); width: 8px; height: 21px; position: absolute;"></div>
-            </div>
-
-<!--            <img id="labyrinthLeft" src="/img/labyrinth.png" />-->
-
-            <h1 id="slowCounter">0</h1>
-        </div>
-        <div id="secondRightBlock">
-            <h2>Решение</h2>
-            <p>Теперь можно<br> просто телепортироваться
-                прямо на лучшую страницу.</p>
-            <div class="labyrinth">
-                <div id="myDivFast" style="background-image: url('img/man.png'); width: 8px; height: 21px; position: absolute;"></div>
-            </div>
-
-            <h1 id="fastCounter">0</h1>
-        </div>
-
-    </section>
+<!--    <section id="second" data-index="2">-->
+<!--        <div id="secondLeftBlock">-->
+<!--            <h2>Проблема</h2>-->
+<!--            <p>Машины определяют, что хорошо.<br>  Попытки найти <br>лучшую информацию.<br>-->
+<!--            Вид сверху.</p>-->
+<!--            <div class="labyrinth">-->
+<!--                <div id="myDiv" style="background-image: url('img/man.png'); width: 8px; height: 21px; position: absolute;"></div>-->
+<!--            </div>-->
+<!--            <h1 id="slowCounter">0</h1>-->
+<!--        </div>-->
+<!--        <div id="secondRightBlock">-->
+<!--            <h2>Решение</h2>-->
+<!--            <p>Теперь можно<br> просто телепортироваться-->
+<!--                прямо на лучшую страницу.</p>-->
+<!--            <div class="labyrinth">-->
+<!--                <div id="myDivFast" style="background-image: url('img/man.png'); width: 8px; height: 21px; position: absolute;"></div>-->
+<!--            </div>-->
+<!--            <h1 id="fastCounter">0</h1>-->
+<!--        </div>-->
+<!--    </section>-->
 
     <section id="third" data-index="3">
         <h1 style="text-align: center; margin-top: 30px;">Представь, ты искал что-то в интернете, и перешел по одной из ссылок</h1>

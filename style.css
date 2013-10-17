@@ -17,19 +17,21 @@ html {
 }
 
 #email::-webkit-input-placeholder {
-    color: white;
-    opacity: 0.7 !important;
+    /*color: white;*/
+   color: #f6f8fa;
+    /*opacity: 0.7 !important;*/
 }
 
 #emailSecond::-webkit-input-placeholder {
-    color: white;
-    opacity: 0.7 !important;
+    /*color: white;*/
+    color: #f6f8fa;
+    /*opacity: 0.7 !important;*/
 }
 
 #valid{
     position: absolute;
     margin-top: 50px;
-    margin-left: 30px;
+    margin-left: 20px;
     color: white;
 }
 
@@ -46,13 +48,11 @@ html {
     width: 100%;
     position: fixed;
     /*left: -50%;*/
-
-    background-image: url("/img/machines.png");
+    background-image: url("/newImg/backgoungOfFirstSlide.jpg");
     /*position:  absolute;*/
     background-size: cover;
     background-repeat: no-repeat;
     /*background-size: 100%;*/
-
     background-position: top;
 }
 
@@ -143,7 +143,8 @@ html {
     position: relative;
 }
 #emailDiv {
-    background-image: url("/img/inputRoundedBackground.png");
+    background-image: url("/newImg/staticTextBoxBackground.png");
+    background-size:335px 43px;
     padding-top: 10px;
     padding-left: 9px;
     display: inline-block;
@@ -175,6 +176,11 @@ html {
 
 #email:focus{
     outline: 0;
+    color: #2f9cc2;
+}
+
+#email:focus::-webkit-input-placeholder {
+    color: #2f9cc2;
 }
 
 #emailSecond {
@@ -192,12 +198,12 @@ html {
 
 #formContainer{
     left: 50%;
-    top: 50%;
+    top: 100%;
     position: absolute;
     width: 500px;
     height: 80px;
     margin-left: -250px;
-    margin-top: -40px;
+    margin-top: -250px;
 }
 
 #secondFormContainer{
@@ -212,9 +218,10 @@ html {
 
 #submitButton{
     outline: 0;
-    color: #5dc6a5;
+    color: #55b9dc;
+    /*color:    #5dc6a5;*/
     font-size: 11pt;
-    background-image: url("/img/roundedButton.png");
+    background-image: url("/newImg/staticButtonBackground.png");
     width: 135px;
     height: 43px;
     border: none;
@@ -225,14 +232,14 @@ html {
 #submitButton:hover
 {
     outline: 0;
-    color: white;
-    background-image: url("/img/submitButtonHover.png");
+    color: #f6f8fa;
+    background-image: url("/newImg/hoverButtonBackground.png");
 }
 #submitButton:active
 {
     outline: 0;
-    color: white;
-    background-image: url("/img/submitButtonIsPressed.png");
+    color: #f6f8fa;
+    background-image: url("/newImg/pressedButtonBackground.png");
 }
 
 #submitButtonSecond{
@@ -274,6 +281,7 @@ html {
     top:70%;
     left:50%;
     width: 170px;
+    margin-top: 100px;
     margin-left: -100px;
 }
 
@@ -314,6 +322,24 @@ html {
     top: 100%;
     margin-top: -100px;
     margin-left: -300px;
+}
+
+#ratinatorLabel{
+    color: white;
+    font-size: 46pt;
+    left: 50%;
+    position: absolute;
+    top: 230px;
+    margin-left: -250px;
+}
+
+#newMachineDicedeLabel{
+    color: white;
+    font-size: 12pt;
+    left: 50%;
+    position: absolute;
+    top: 320px;
+    margin-left: -200px;
 }
 
 @font-face {
