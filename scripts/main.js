@@ -103,17 +103,20 @@ $(document).ready(function() {
 
     $('#submitButton').click(function(){
         validateAndChangeBackGroundBack();
-        return isValid;
+        if(isValid){
+            var url = 'send_email.php?email=' + $('#email').val();
+            $.get(url).done(function(data) {
+                    alert( "success" );
+                });
+        }
+
+        return false;
     });
 
     $('#submitButtonSecond').click(function(){
         validateForSecondEmailAndChangeBackGroundBack();
         return isValid;
     });
-
-//    startMoving();
-//    setTeleportStartCoordinates();
-//    moveToCenter();
 
     $("#divHelper").click(function(){
         hidePopup();
@@ -143,183 +146,3 @@ $(document).ready(function() {
         document.getElementById("buttonsDescriptionContainer").style.display="none";
     }
 });
-
-
-function setAngle(angle, onExecuted){
-    var angleToSet = 0;// = angle;
-
-    while(_currentAngle != angle){
-        var iterationStep = _radius < 50 &&
-            (Math.abs(angle - _currentAngle)) > 1 ? 2 : 1;
-
-        if(_currentAngle > angle) {
-            _currentAngle -= iterationStep;
-        }
-        else{
-            _currentAngle += iterationStep;
-        }
-        angleToSet = _currentAngle;
-        var alpha = Math.PI * 2;
-        angleToSet *= Math.PI / 180;
-        var theta = alpha;
-
-        var pointx  =  Math.floor(Math.cos( theta + angleToSet) * _radius);
-        var pointy  = Math.floor(Math.sin( theta + angleToSet) * _radius );
-
-        var xx = pointx + _circleCenterX;
-        var yy = pointy + _circleCenterY;
-
-        setTimeout(function(x, y, isLast){
-            return function(){
-                setCoordinates(x,y);
-                if(isLast && onExecuted != null){
-                    onExecuted();
-                }
-            } ;
-        }(xx, yy, _currentAngle == angle), _delay);
-        _lastPoint.x = xx;
-        _lastPoint.y = yy;
-        _delay += 30;
-    }
-}
-
-function moveTo(x, y){
-    var point = new Object();
-    point.x = Math.round(x);
-    point.y = Math.round(y);
-
-    moveNext(point);
-}
-
-function moveNext(nextPoint){
-    //console.log(new Date() + ": moving to " + nextPoint.x + " " + nextPoint.y);
-
-    var differenceBetweenXs = Math.abs(nextPoint.x - _lastPoint.x);
-    var differenceBetweenYs = Math.abs(nextPoint.y - _lastPoint.y);
-
-    var allIterations = differenceBetweenXs > differenceBetweenYs ?
-        differenceBetweenXs : differenceBetweenYs;
-    var oneIterationXStep = differenceBetweenXs / allIterations;
-    var oneIterationYStep = differenceBetweenYs / allIterations;
-
-    var iterations = 0;
-
-    while(iterations < allIterations){
-        iterations++;
-
-        setTimeout(function(xStep, yStep, nPoint){
-            return function(){ MoveToNextPoint(xStep, yStep, nPoint);}
-        }(oneIterationXStep, oneIterationYStep, nextPoint), _delay);
-
-        _delay += 30;
-    }
-}
-
-
-
-function MoveToNextPoint(oneIterationXStep, oneIterationYStep, nextPoint){
-    var previousX = _currentX;
-    var previousY = _currentY;
-    _currentX = makeCloser(_currentX, nextPoint.x, oneIterationXStep);
-    _currentY = makeCloser(_currentY, nextPoint.y, oneIterationYStep);
-
-//            console.log("MoveToNextPoint: oneIterationXStep: " + oneIterationXStep +
-//            "; oneIterationYStep: " + oneIterationYStep + "; nextPoint.x: " + nextPoint.x +
-//            "; nextPoint.y: " + nextPoint.y + "; previousX: " + previousX +
-//            "; previousY: " + previousY + "; currentX: " + _currentX + "; currentY: " + _currentY);
-
-    setCoordinates(_currentX, _currentY);
-}
-
-function setCoordinates(x, y){
-    _currentX = x;
-    _currentY = y;
-
-    $("#myDiv").css("margin-left", Math.round(x));
-    $("#myDiv").css("margin-top", Math.round(y));
-}
-
-function setCoordinatesFor(elementId, x, y){
-    $(elementId).css("margin-left", Math.round(x));
-    $(elementId).css("margin-top", Math.round(y));
-}
-
-function makeCloser(current, mustBe, closerValue){
-    return current >= mustBe? current - closerValue : current + closerValue;
-}
-
-function fadeOutFromStartCompleted(){
-    setCoordinatesFor("#myDivFast", 130, 122);
-    $('#myDivFast').fadeIn(function(){
-        var currentCounter = parseInt($("#fastCounter").text());
-        currentCounter++;
-        $("#fastCounter").text(currentCounter);
-    });
-
-    setTimeout(function(){
-        $('#myDivFast').fadeOut(function(){
-            setTeleportStartCoordinates();
-            $('#myDivFast').fadeIn();
-
-            moveToCenter();
-        });
-
-
-    }, 2000);
-}
-
-function setTeleportStartCoordinates(){
-    setCoordinatesFor("#myDivFast", 130, -20);
-}
-
-function moveToCenter(){
-    setTimeout(function(){
-        $('#myDivFast').fadeOut(fadeOutFromStartCompleted);
-    }, 1000);
-}
-
-function startMoving() {
-    setAngle(95);
-    setAngle(165);
-    moveTo(42, 140);
-    _radius = 88;
-    setAngle(260);
-    setAngle(235);
-    moveTo(92, 72);
-    _radius = 60;
-    setAngle(90);
-    moveTo(132, 208);
-    _radius = 88;
-    setAngle(125);
-    setAngle(10);
-    setAngle(90);
-    moveTo(128, 186);
-    _radius = 60;
-    setAngle(375);
-    setAngle(325);
-    moveTo(156, 101);
-
-    _radius = 32;
-    setAngle(20);
-    setAngle(325);
-    moveTo(180, 90);
-    _radius = 60;
-    setAngle(90);
-    moveTo(132, 208);
-    _radius = 88;
-    setAngle(125);
-    setAngle(10);
-    setAngle(90);
-    moveTo(128, 184);
-    _radius = 60;
-    setAngle(240);
-    moveTo(75, 55);
-    _radius = 88;
-    setAngle(170);
-    moveTo(12, 146);
-    _radius = 118;
-    setAngle(100);
-    setAngle(270, startMoving);
-
-    _delay = 100;
-}
