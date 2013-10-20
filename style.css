@@ -38,7 +38,7 @@ html {
 #validSecond{
     position: absolute;
     margin-top: 50px;
-    margin-left: 30px;
+    margin-left: 20px;
     color: white;
 }
 
@@ -78,9 +78,11 @@ html {
 #third{
     height: 100%;
     width: 100%;
-    min-height: 100%;
-    background-image: url("/img/site2.png");
+    background-image: url("/newImg/backgrountSecondSlide.png");
+    background-repeat: no-repeat;
     background-size: cover;
+    background-color: white;
+    background-position: top;
 }
 
 #fourth{
@@ -90,7 +92,7 @@ html {
     min-height: 100%;
     top: 300%;
     background-size: cover;
-    background-image: url("/img/backgroud.jpg");
+    background-image: url("/newImg/thirdSectionBackground.png");
     background-repeat: no-repeat;
 }
 
@@ -155,7 +157,8 @@ html {
 }
 
 #emailDivSecond{
-    background-image: url("/img/inputRoundedBackground.png");
+    background-image: url("/newImg/staticTextBoxBackground.png");
+    background-size:335px 43px;
     padding-top: 10px;
     padding-left: 9px;
     display: inline-block;
@@ -194,6 +197,11 @@ html {
 
 #emailSecond:focus{
     outline: 0;
+    color: #f77411;
+}
+
+#emailSecond:focus::-webkit-input-placeholder {
+    color: #f77411;
 }
 
 #formContainer{
@@ -244,9 +252,9 @@ html {
 
 #submitButtonSecond{
     outline: 0;
-    color: #5dc6a5;
+    color: #f6f8fa;
     font-size: 11pt;
-    background-image: url("/img/roundedButton.png");
+    background-image: url("/newImg/staticSecondButtonBackground.png");
     width: 135px;
     height: 43px;
     border: none;
@@ -257,14 +265,12 @@ html {
 #submitButtonSecond:hover
 {
     outline: 0;
-    color: white;
-    background-image: url("/img/submitButtonHover.png");
+    background-image: url("/newImg/hoverSecondButtonBackground.png");
 }
 #submitButtonSecond:active
 {
     outline: 0;
-    color: white;
-    background-image: url("/img/submitButtonIsPressed.png");
+    background-image: url("/newImg/pressedSecondButtonBackground.png");
 }
 
 #subscribeDiv{
@@ -275,7 +281,7 @@ html {
     margin-left: -250px;
 }
 
-#socialButtonsFirst{
+#socialButtonsDiv{
     margin-top: 50px;
     position: absolute;
     top:70%;
@@ -284,17 +290,6 @@ html {
     margin-top: 100px;
     margin-left: -100px;
 }
-
-#socialButtonsSecond{
-    margin-top: 50px;
-    position: absolute;
-    top:100%;
-    left:50%;
-    width: 170px;
-    margin-left: -100px;
-}
-
-
 
 .labyrinth {
     background-image: url('/img/labyrinth.png');
@@ -325,8 +320,9 @@ html {
 }
 
 #ratinatorLabel{
+    font-family: BlairMdITC;
     color: white;
-    font-size: 46pt;
+    font-size: 35pt;
     left: 50%;
     position: absolute;
     top: 230px;
@@ -346,23 +342,49 @@ html {
     font-family: 'langdon';
     src: url('/langdon.otf');
 }
+@font-face {
+    font-family: 'BlairMdITC';
+    src: url('/BlairMdITCTT.ttf');
+}
 
 #likeButtonsContainer{
     position: absolute;
     left: 100%;
     margin-left: -85px;
     top:100%;
-    margin-top: -60px;
+    margin-top: -200px;
 }
 
-#likeButtonsContainer img{
+#popUpDiv{
+    background-image: url("/newImg/popUpBackgroud.png");
+    background-repeat: no-repeat;
+    height: 42px;
+    width: 220px;
     position: absolute;
-    opacity: 0.7;
+    top: 100%;
+    left: 100%;
+    margin-left: -310px;
+    margin-top: -190px;
 }
 
-#likeButtonsContainer img:hover {
-    opacity: 1;
+#popUpTextStyle{
+    font-family: BlairMdITC;
+
+    color: white;
+    font-size: 11pt;
+    position: absolute;
+    margin-left: 12px ;
+    margin-top: 12px ;
 }
+
+/*#likeButtonsContainer img{*/
+    /*position: absolute;*/
+    /*opacity: 0.7;*/
+/*}*/
+
+/*#likeButtonsContainer img:hover {*/
+    /*opacity: 1;*/
+/*}*/
 
 #dislikeButton{
     margin-left: 34px;
@@ -372,8 +394,81 @@ html {
 #buttonsDescriptionContainer{
     position: absolute;
     left: 100%;
-    margin-left: -370px;
+    margin-left: -350px;
     top: 100%;
-    margin-top: -150px;
-
+    margin-top: -300px;
 }
+
+/*Start RockButtonStyle*/
+
+#rockDivWrapper{
+    position: absolute;
+    height: 62px;
+    width: 62px;
+    background-repeat: no-repeat;
+}
+
+#rockButton{
+    position: absolute;
+    margin-left: 16px;
+    margin-top: 16px;
+}
+
+#rockDivWrapper:hover{
+    background-image: url("/newImg/rockButtonHoverBackground.png");
+}
+
+/*End RockButtonStyle*/
+
+/*Start LikeButtonStyle*/
+#likeDivWrapper{
+    margin-top:62px ;
+    position: absolute;
+    height: 62px;
+    width: 62px;
+    background-repeat: no-repeat;
+}
+#likeButton{
+    position: absolute;
+    margin-left: 16px;
+    margin-top: 16px;
+}
+#likeCount{
+    position: absolute;
+    margin-left: 15px;
+    background-image: url("/newImg/likeCount.png");
+    background-repeat: no-repeat;
+    width:  30px;
+    height: 10px;
+}
+
+/*End LikeButtonStyle*/
+
+/*Start DisLikeButtonStyle*/
+#dislikeDivWrapper{
+    margin-top:100px;
+    position: absolute;
+    height: 62px;
+    width: 62px;
+    background-repeat: no-repeat;
+}
+#dislikeButton{
+    position: absolute;
+    margin-left: 16px;
+    margin-top: 16px;
+}
+
+#dislikeCount{
+    position: absolute;
+    margin-top: 48px;
+    margin-left: 22px;
+    background-image: url("/newImg/dislikeCount.png");
+    background-repeat: no-repeat;
+    width:  20px;
+    height: 10px;
+}
+
+/*End DisLikeButtonStyle*/
+
+
+

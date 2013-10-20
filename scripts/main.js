@@ -1,5 +1,7 @@
 var isValid = false;
-var errorText = "На такой адрес приглашение не придет :)";
+var openHeaderStyle="<header style='margin-top: 0px; font-family: BlairMdITC; color: white;font-size: 11pt;'>";
+var closeHeaderStyle = "<header>";
+var errorText = "Ошибочка вышла.";
 var _currentX = 0;
 var _currentY = 0;
 var _delay = 100;
@@ -73,21 +75,18 @@ function validateForSecondEmailAndChangeBackGroundBack(){
     }
 
     document.getElementById('emailDivSecond').style.backgroundImage =
-        'url("/img/inputRoundedBackground.png")';
+        'url("/newImg/staticTextBoxBackground.png")';
 }
 function emailChangeBackground()
 {
     document.getElementById('emailDiv').style.backgroundImage =
         'url("/newImg/focusedTextBoxBackground.png")';
-
-//    document.getElementById('email::-webkit-input-placeholder').style.color='#55b9dc';
-
 }
 
 function emailSecondChangeBackground()
 {
     document.getElementById('emailDivSecond').style.backgroundImage =
-        'url("/img/focusedTextBoxbackground.png")';
+        'url("/newImg/focusedTextBoxBackground.png")';
 }
 
 $(document).ready(function() {
@@ -112,22 +111,36 @@ $(document).ready(function() {
         return isValid;
     });
 
-    startMoving();
+//    startMoving();
+//    setTeleportStartCoordinates();
+//    moveToCenter();
 
-    setTeleportStartCoordinates();
-    moveToCenter();
+    $("#divHelper").click(function(){
+        hidePopup();
+    });
+
+    $("#rockButton").click(function(){
+        showPopup("Эта кнопка перенесет тебя в мир правдивой<br> информации!!","-190px");
+    });
 
     $("#likeButton").click(function(){
-        showPopup("Здорово! Ты только что оценил одну из страниц!<br> Теперь мы можем предложить тебе похожие.");
+        showPopup("Здорово! Ты только что оценил одну из страниц!<br> Теперь мы можем предложить тебе похожие.","-130px");
     });
 
     $("#dislikeButton").click(function(){
-        showPopup("Ну что же.. теперь мы будем реже предлагать эту страницу другим. Спасибо!");
+        showPopup("Ну что же.. теперь мы будем реже<br> предлагать эту страницу другим. Спасибо!","-95px");
     });
 
-    function showPopup(text){
+    function hidePopup(){
+        document.getElementById("clickResultPopup").style.display="none";
+        document.getElementById("buttonsDescriptionContainer").style.display="inline";
+    }
+
+    function showPopup(text,marginTop){
         $("#clickResultPopup").show();
-        $("#clickResultPopup").html(text);
+        $("#clickResultPopup").html(openHeaderStyle+text+closeHeaderStyle);
+        document.getElementById("clickResultPopup").style.marginTop=marginTop;
+        document.getElementById("buttonsDescriptionContainer").style.display="none";
     }
 });
 
