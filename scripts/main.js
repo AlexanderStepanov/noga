@@ -139,7 +139,7 @@ $(document).ready(function() {
     });
 
 //    RockButton Mouse Behavior
-       document.getElementById("rockButton").onmouseout=function()
+    document.getElementById("rockButton").onmouseout=function()
     {
         document.getElementById("rockButton").src="/newImg/staticRockButton.png"
         document.getElementById("rockDivWrapper").style.backgroundImage='none';
@@ -209,7 +209,7 @@ $(document).ready(function() {
 
     function showPopup(text,marginTop){
         $("#clickResultPopup").show();
-        $("#clickResultPopup").html(openHeaderStyle+text+closeHeaderStyle);
+        $("#popupText").html(openHeaderStyle+text+closeHeaderStyle);
         document.getElementById("clickResultPopup").style.marginTop=marginTop;
         document.getElementById("buttonsDescriptionContainer").style.display="none";
     }

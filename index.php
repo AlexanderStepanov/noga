@@ -32,18 +32,31 @@
             </div>
         </section>
     <section id="third" data-index="2">
+
+        <h1 id="secondScreenHeader">Представь, как изменится твой опыт серфинга, когда..</h1>
+
 <div id="divHelper" style="position: absolute;height: 100%; width: 100%" ></div>
+
+
         <div id="clickResultPopup"
              style="display: none;
              position: absolute;
              left:100%;
              top: 100%;
-             width: 450px;
-             margin-left: -445px;
-             background-image: url(/newImg/popUpBackgroud.png);
-             background-size:350px 42px;
+             width: 350px;
+             margin-left: -465px;
+             background-color: #63c9be;
              background-repeat: no-repeat;
              padding: 5px">
+            <div style="
+             width: 12px;
+             height: 20px;
+             background-image: url(/newImg/greenArrow.png);
+             position: absolute;
+             top: 50%;
+             margin-top: -10px;
+             left: 100%;"></div>
+            <span id="popupText"></span>
         </div>
         <div id="buttonsDescriptionContainer">
             <img style="position: absolute; margin-left: -175px; margin-top: -20px;" src="/newImg/buttonsDescription.png" width="350px" />
