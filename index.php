@@ -9,7 +9,7 @@
 
     <link type="text/css" rel="stylesheet" href="style.css" />
     <link type="text/css" rel="stylesheet" href="onepage-scroll.css" />
-    <title>Ratinator</title>
+    <title>Ratinator - Вернем власть людям</title>
 </head>
 <body>
 

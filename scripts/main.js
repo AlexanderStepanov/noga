@@ -2,6 +2,7 @@ var isValid = false;
 var openHeaderStyle="<header style='margin-top: 0px; font-family: BlairMdITC; color: white;font-size: 11pt;'>";
 var closeHeaderStyle = "<header>";
 var errorText = "Ошибочка вышла.";
+var successText = "Мы успешно тебя подписали, и уведомим одним из первых!";
 var _currentX = 0;
 var _currentY = 0;
 var _delay = 100;
@@ -17,7 +18,7 @@ function clearEmailInput()
     var value = email.val();
     if (value =='')
     {
-        $('#valid').text('');
+        setInfo1('');
     }
 }
 
@@ -27,7 +28,7 @@ function clearEmailInputSecond()
     var value = email.val();
     if (value =='')
     {
-        $('#validSecond').text('');
+        setInfo2('');
     }
 }
 
@@ -39,19 +40,27 @@ function validateAndChangeBackGroundBack(){
         isValid = pattern.test(value);
         if(isValid){
             //email.css({'border' : '1px solid #569b44'});
-            $('#valid').text('');
+            setInfo1('');
         }
         if(!isValid){
             //$(this).css({'border' : '1px solid #ff0000'});
-            $('#valid').text(errorText);
+            setInfo1(errorText);
         }
     } else {
         isValid = false;
         //email.css({'border' : '1px solid #ff0000'});
-        $('#valid').text('');
+        setInfo1('');
     }
     document.getElementById('emailDiv').style.backgroundImage =
         'url("/newImg/staticTextBoxBackground.png")';
+}
+
+function setInfo1(text){
+    $('#valid').text(text);
+}
+
+function setInfo2(text){
+    $('#validSecond').text(text);
 }
 
 function validateForSecondEmailAndChangeBackGroundBack(){
@@ -62,16 +71,16 @@ function validateForSecondEmailAndChangeBackGroundBack(){
         isValid = pattern.test(value);
         if(isValid){
             //email.css({'border' : '1px solid #569b44'});
-            $('#validSecond').text('');
+            setInfo2('');
         }
         if(!isValid){
             //$(this).css({'border' : '1px solid #ff0000'});
-            $('#validSecond').text(errorText);
+            setInfo2(errorText);
         }
     } else {
         isValid = false;
         //email.css({'border' : '1px solid #ff0000'});
-        $('#validSecond').text('');
+        setInfo2('');
     }
 
     document.getElementById('emailDivSecond').style.backgroundImage =
@@ -106,7 +115,8 @@ $(document).ready(function() {
         if(isValid){
             var url = 'send_email.php?email=' + $('#email').val();
             $.get(url).done(function(data) {
-                    alert( "success" );
+                setInfo1(successText);
+//                alert( "success" );
                 });
         }
 
@@ -115,7 +125,16 @@ $(document).ready(function() {
 
     $('#submitButtonSecond').click(function(){
         validateForSecondEmailAndChangeBackGroundBack();
-        return isValid;
+
+        if(isValid){
+            var url = 'send_email.php?email=' + $('#emailSecond').val();
+            $.get(url).done(function(data) {
+                setInfo2(successText);
+//                alert( "success" );
+            });
+        }
+
+        return false;
     });
 
     $("#divHelper").click(function(){
