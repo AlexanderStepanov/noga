@@ -30,10 +30,13 @@
                 </form>
             </div>
             </div>
-        <span id="scrollDown">Скроль вниз</span>
+        <div class="scrollDown">
+            <span id="scrollDown">Скроль вниз</span>
+        </div>
 
         </section>
     <section id="third" data-index="2">
+
 
         <h1 id="secondScreenHeader">Представь, как изменится твой опыт серфинга, когда..</h1>
 
@@ -81,6 +84,10 @@
                 <div id="dislikeCount"></div>
             </div>
         </div>
+        <div class="scrollDown">
+        </div>
+        <div class="scrollUp">
+        </div>
     </section>
 <section id="fourth" data-index="3">
 
@@ -116,6 +123,8 @@
     </div>
 
     <a id="bottomEmail" href="mailto:alex.stepanov@me.com">Написать нам</a>
+    <div class="scrollUp">
+    </div>
    </section>
 </div>
 </body>

@@ -520,15 +520,38 @@ html {
     margin-left: -40px;
 }
 
-#scrollDown{
-    color:white;
+.scrollDown{
     position: absolute;
     top: 100%;
     left: 50%;
-    margin-left: -50px;
-    margin-top: -50px;
-    font-size: 11pt;
+    width: 300px;
+    height: 80px;
+    cursor: pointer;
     cursor: hand;
+    margin-left: -150px;
+    margin-top: -80px;
+}
+
+.scrollUp{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 300px;
+    height: 80px;
+    cursor: pointer;
+    cursor: hand;
+    margin-left: -150px;
+}
+
+#scrollDown{
+    color:white;
+    text-align: center;
+    font-size: 11pt;
+    top: 100%;
+    position: absolute;
+    margin-top: -40px;
+    left: 50%;
+    margin-left: -50px;
 }
 
 /*End DisLikeButtonStyle*/

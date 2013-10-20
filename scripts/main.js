@@ -105,8 +105,24 @@ $(document).ready(function() {
     $('#email').on('keyup', clearEmailInput);
     $('#email').focus(emailChangeBackground);
 
-    $("#scrollDown").click(function(){
-        document.scrollTop = 10;
+    $(".scrollDown").click(function(){
+        $(".main").moveDown();
+    });
+
+    $(".scrollUp").click(function(){
+        $(".main").moveUp();
+    });
+
+    $(this).keydown(function( event ) {
+        if ( event.which == 38 ) //up
+        {
+            $(".main").moveUp();
+        }
+
+        else if(event.which == 40) //down
+        {
+            $(".main").moveDown();
+        }
     });
 
     $('#emailSecond').blur(validateForSecondEmailAndChangeBackGroundBack);
