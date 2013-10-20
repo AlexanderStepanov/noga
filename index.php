@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<div id="backgroundContainer"></div>
+
 <div class="main" style="position: relative;">
     <section id="first" data-index="1">
         <div style="position: absolute;height: 500px; width: 500px; left: 50%; margin-left: -250px" >

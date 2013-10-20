@@ -46,14 +46,8 @@ html {
 {
     height: 100%;
     width: 100%;
-    position: fixed;
     /*left: -50%;*/
-    background-image: url("/newImg/backgoungOfFirstSlide.jpg");
-    /*position:  absolute;*/
-    background-size: cover;
-    background-repeat: no-repeat;
-    /*background-size: 100%;*/
-    background-position: top;
+
 }
 
 #first {
@@ -63,6 +57,12 @@ html {
     width: 100%;
     position: absolute;
     min-height: 100%;
+    background-image: url("/newImg/backgoungOfFirstSlide.jpg");
+    /*position:  absolute;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-size: 100%;*/
+    background-position: top;
 }
 
 #second{
