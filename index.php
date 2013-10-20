@@ -103,7 +103,8 @@
         </div>
 
     </div>
-    <span id="bottomEmail">alex.stepanov@me.com</span>
+
+    <a id="bottomEmail" href="mailto:alex.stepanov@me.com">Написать нам</a>
    </section>
 </div>
 </body>

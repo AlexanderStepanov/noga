@@ -499,9 +499,10 @@ html {
 #bottomEmail{
     color: white;
     position: absolute;
-    left: 30px;
+    left: 50%;
     top: 100%;
     margin-top: -50px;
+    margin-left: -40px;
 }
 
 #scrollDown{
