@@ -47,7 +47,11 @@
              margin-left: -465px;
              background-color: #63c9be;
              background-repeat: no-repeat;
-             padding: 5px">
+             padding: 5px;
+             -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+             ">
             <div style="
              width: 12px;
              height: 20px;
@@ -56,7 +60,7 @@
              top: 50%;
              margin-top: -10px;
              left: 100%;"></div>
-            <span id="popupText"></span>
+            <span id="popupText" style="text-align: center; font-size: 50px;"></span>
         </div>
         <div id="buttonsDescriptionContainer">
             <img style="position: absolute; margin-left: -175px; margin-top: -20px;" src="/newImg/buttonsDescription.png" width="350px" />

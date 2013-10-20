@@ -489,6 +489,17 @@ html {
     text-align: center;
     margin-top: 50px;
     font-weight: normal;
+    background-color: #63c9be;
+    color: white;
+    display: inline;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    width: 650px;
+    margin-left: -325px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
 }
 
 /*End DisLikeButtonStyle*/
