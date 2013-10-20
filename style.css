@@ -352,7 +352,7 @@ html {
     left: 100%;
     margin-left: -85px;
     top:100%;
-    margin-top: -200px;
+    margin-top: -230px;
 }
 
 #popUpDiv{
@@ -403,6 +403,8 @@ html {
 
 #rockDivWrapper{
     position: absolute;
+    margin-left:-5px ;
+    margin-top: 5px;
     height: 62px;
     width: 62px;
     background-repeat: no-repeat;
@@ -413,32 +415,28 @@ html {
     margin-left: 16px;
     margin-top: 16px;
 }
-
-#rockDivWrapper:hover{
-    background-image: url("/newImg/rockButtonHoverBackground.png");
-}
-
 /*End RockButtonStyle*/
 
 /*Start LikeButtonStyle*/
 #likeDivWrapper{
     margin-top:62px ;
     position: absolute;
-    height: 62px;
-    width: 62px;
+    height: 78px;
+    width: 48px;
     background-repeat: no-repeat;
 }
 #likeButton{
     position: absolute;
-    margin-left: 16px;
-    margin-top: 16px;
+    margin-left: 12px;
+    margin-top: 35px;
 }
 #likeCount{
     position: absolute;
-    margin-left: 15px;
+    margin-left: 12px;
+    margin-top: 14px;
     background-image: url("/newImg/likeCount.png");
     background-repeat: no-repeat;
-    width:  30px;
+    width:  24px;
     height: 10px;
 }
 
@@ -446,26 +444,26 @@ html {
 
 /*Start DisLikeButtonStyle*/
 #dislikeDivWrapper{
-    margin-top:100px;
+    margin-top:126px;
     position: absolute;
-    height: 62px;
-    width: 62px;
+    height: 78px;
+    width: 48px;
     background-repeat: no-repeat;
 }
 #dislikeButton{
     position: absolute;
-    margin-left: 16px;
-    margin-top: 16px;
+    margin-left: 12px;
+    margin-top: 18px;
 }
 
 #dislikeCount{
     position: absolute;
-    margin-top: 48px;
-    margin-left: 22px;
+    margin-top: 56px;
+    margin-left: 18px;
     background-image: url("/newImg/dislikeCount.png");
     background-repeat: no-repeat;
-    width:  20px;
-    height: 10px;
+    width:  14px;
+    height: 9px;
 }
 
 /*End DisLikeButtonStyle*/

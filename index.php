@@ -6,7 +6,6 @@
     <script type="text/javascript" src="scripts/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="/scripts/main.js"></script>
     <script type="text/javascript" src="/jquery.onepage-scroll.js" ></script>
-
     <link type="text/css" rel="stylesheet" href="style.css" />
     <link type="text/css" rel="stylesheet" href="onepage-scroll.css" />
     <title>Ratinator - Вернем власть людям</title>
@@ -14,30 +13,24 @@
 <body>
 
 <div id="backgroundContainer"></div>
-
-
 <div class="main" style="position: relative;">
-   <section id="first" data-index="1">
-
+    <section id="first" data-index="1">
         <header id="ratinatorLabel">R A T I N A T O R</header>
-<!--        find font-family BlairMdITC TT-->
         <header id="newMachineDicedeLabel">Машины решают, что хорошо. Вернем власть людям.</header>
-               <div id="formContainer">
+                <div id="formContainer">
                  <form name ="form1" method="post" action="index.php">
                       <div>
                            <div id="emailDiv">
                                 <input id="email" value="" name="email" placeholder="Your@mail.com">
                            </div>
-                                <input id="submitButton" type= "Submit" Name = "Submit1" VALUE = "Подписаться"/>
+                                <input id="submitButton" type= "Submit" Name = "Submit1" VALUE = "Подписаться">
                                 <p><span id="valid"></span></p>
                       </div>
                 </form>
-               </div>
-    </section>
-
+            </div>
+        </section>
     <section id="third" data-index="2">
 <div id="divHelper" style="position: absolute;height: 100%; width: 100%" ></div>
-
         <div id="clickResultPopup"
              style="display: none;
              position: absolute;
@@ -50,17 +43,13 @@
              background-repeat: no-repeat;
              padding: 5px">
         </div>
-
         <div id="buttonsDescriptionContainer">
             <img style="position: absolute; margin-left: -175px; margin-top: -20px;" src="/newImg/buttonsDescription.png" width="350px" />
             <img style="position: absolute; margin-top: 10px; margin-left: 20px;" src="/newImg/arrow.png"/>
         </div>
-
         <div id="likeButtonsContainer">
             <div id="rockDivWrapper">
-                    <img id="rockButton" src="/newImg/staticRockButton.png"
-                         onmouseover="this.src ='/newImg/hoverRockButton.png'"
-                         onmouseout="this.src='/newImg/staticRockButton.png'"/>
+                    <img id="rockButton" src="/newImg/staticRockButton.png"/>
             </div>
             <div id="likeDivWrapper">
                     <div id="likeCount"></div>
@@ -72,12 +61,10 @@
             </div>
         </div>
     </section>
-
 <section id="fourth" data-index="3">
     <header id="ratinatorLabel">R A T I N A T O R</header>
     <header id="newMachineDicedeLabel">Машины решают, что хорошо. Вернем власть людям.</header>
-
-        <div id="secondFormContainer">
+         <div id="secondFormContainer">
             <form name ="form2" method="post" action="index.php">
                 <div>
                     <div id="emailDivSecond">
@@ -88,7 +75,7 @@
                 </div>
             </form>
         </div>
-</section>
+   </section>
 </div>
 </body>
 </html>
