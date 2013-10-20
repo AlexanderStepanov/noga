@@ -57,7 +57,7 @@ html {
     width: 100%;
     position: absolute;
     min-height: 100%;
-    background-image: url("/newImg/backgoungOfFirstSlide.jpg");
+    background-image: url("newImg/backgoungOfFirstSlide.jpg");
     /*position:  absolute;*/
     background-size: cover;
     background-repeat: no-repeat;
@@ -78,7 +78,7 @@ html {
 #third{
     height: 100%;
     width: 100%;
-    background-image: url("/newImg/backgrountSecondSlide.png");
+    background-image: url("newImg/backgrountSecondSlide.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: white;
@@ -92,7 +92,7 @@ html {
     min-height: 100%;
     top: 300%;
     background-size: cover;
-    background-image: url("/newImg/thirdSectionBackground.png");
+    background-image: url("newImg/thirdSectionBackground.png");
     background-repeat: no-repeat;
 }
 
@@ -145,7 +145,7 @@ html {
     position: relative;
 }
 #emailDiv {
-    background-image: url("/newImg/staticTextBoxBackground.png");
+    background-image: url("newImg/staticTextBoxBackground.png");
     background-size:335px 43px;
     padding-top: 10px;
     padding-left: 9px;
@@ -157,7 +157,7 @@ html {
 }
 
 #emailDivSecond{
-    background-image: url("/newImg/staticTextBoxBackground.png");
+    background-image: url("newImg/staticTextBoxBackground.png");
     background-size:335px 43px;
     padding-top: 10px;
     padding-left: 9px;
@@ -229,7 +229,7 @@ html {
     color: #55b9dc;
     /*color:    #5dc6a5;*/
     font-size: 11pt;
-    background-image: url("/newImg/staticButtonBackground.png");
+    background-image: url("newImg/staticButtonBackground.png");
     width: 135px;
     height: 43px;
     border: none;
@@ -241,20 +241,20 @@ html {
 {
     outline: 0;
     color: #f6f8fa;
-    background-image: url("/newImg/hoverButtonBackground.png");
+    background-image: url("newImg/hoverButtonBackground.png");
 }
 #submitButton:active
 {
     outline: 0;
     color: #f6f8fa;
-    background-image: url("/newImg/pressedButtonBackground.png");
+    background-image: url("newImg/pressedButtonBackground.png");
 }
 
 #submitButtonSecond{
     outline: 0;
     color: #f6f8fa;
     font-size: 11pt;
-    background-image: url("/newImg/staticSecondButtonBackground.png");
+    background-image: url("newImg/staticSecondButtonBackground.png");
     width: 135px;
     height: 43px;
     border: none;
@@ -265,12 +265,12 @@ html {
 #submitButtonSecond:hover
 {
     outline: 0;
-    background-image: url("/newImg/hoverSecondButtonBackground.png");
+    background-image: url("newImg/hoverSecondButtonBackground.png");
 }
 #submitButtonSecond:active
 {
     outline: 0;
-    background-image: url("/newImg/pressedSecondButtonBackground.png");
+    background-image: url("newImg/pressedSecondButtonBackground.png");
 }
 
 #subscribeDiv{
@@ -307,7 +307,7 @@ html {
     margin-left: 280px;
 }
 .labyrinth {
-    background-image: url('/img/labyrinth.png');
+    background-image: url('img/labyrinth.png');
     height: 266px;
     width: 268px;
     padding: 0;
@@ -372,7 +372,7 @@ html {
 
 @font-face {
     font-family: 'BlairMdITC';
-    src: url('/BlairMdITCTT.ttf');
+    src: url('BlairMdITCTT.ttf');
 }
 
 #likeButtonsContainer{
@@ -384,7 +384,7 @@ html {
 }
 
 #popUpDiv{
-    background-image: url("/newImg/popUpBackgroud.png");
+    background-image: url("newImg/popUpBackgroud.png");
     background-repeat: no-repeat;
     height: 42px;
     width: 220px;
@@ -462,7 +462,7 @@ html {
     position: absolute;
     margin-left: 12px;
     margin-top: 14px;
-    background-image: url("/newImg/likeCount.png");
+    background-image: url("newImg/likeCount.png");
     background-repeat: no-repeat;
     width:  24px;
     height: 10px;
@@ -488,7 +488,7 @@ html {
     position: absolute;
     margin-top: 56px;
     margin-left: 18px;
-    background-image: url("/newImg/dislikeCount.png");
+    background-image: url("newImg/dislikeCount.png");
     background-repeat: no-repeat;
     width:  14px;
     height: 9px;

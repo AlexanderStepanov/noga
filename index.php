@@ -4,8 +4,8 @@
 <html>
 <head>
     <script type="text/javascript" src="scripts/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript" src="/scripts/main.js"></script>
-    <script type="text/javascript" src="/jquery.onepage-scroll.js" ></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="jquery.onepage-scroll.js" ></script>
     <link type="text/css" rel="stylesheet" href="style.css" />
     <link type="text/css" rel="stylesheet" href="onepage-scroll.css" />
     <title>Ratinator - Вернем власть людям</title>
@@ -60,7 +60,7 @@
             <div style="
              width: 12px;
              height: 20px;
-             background-image: url(/newImg/greenArrow.png);
+             background-image: url(newImg/greenArrow.png);
              position: absolute;
              top: 50%;
              margin-top: -10px;
@@ -68,12 +68,12 @@
             <span id="popupText" style="text-align: center; font-size: 50px;"></span>
         </div>
         <div id="buttonsDescriptionContainer">
-            <img style="position: absolute; margin-left: -175px; margin-top: -20px;" src="/newImg/buttonsDescription.png" width="350px" />
-            <img style="position: absolute; margin-top: 10px; margin-left: 20px;" src="/newImg/arrow.png"/>
+            <img style="position: absolute; margin-left: -175px; margin-top: -20px;" src="newImg/buttonsDescription.png" width="350px" />
+            <img style="position: absolute; margin-top: 10px; margin-left: 20px;" src="newImg/arrow.png"/>
         </div>
         <div id="likeButtonsContainer">
             <div id="rockDivWrapper">
-                    <img id="rockButton" src="/newImg/staticRockButton.png"/>
+                    <img id="rockButton" src="newImg/staticRockButton.png"/>
             </div>
             <div id="likeDivWrapper">
                     <div id="likeCount"></div>

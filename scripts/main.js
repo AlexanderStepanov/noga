@@ -160,33 +160,33 @@ $(document).ready(function() {
 //    RockButton Mouse Behavior
     document.getElementById("rockButton").onmouseout=function()
     {
-        document.getElementById("rockButton").src="/newImg/staticRockButton.png"
+        document.getElementById("rockButton").src="newImg/staticRockButton.png"
         document.getElementById("rockDivWrapper").style.backgroundImage='none';
     }
     document.getElementById("rockButton").onmouseover=function()
     {
-        document.getElementById("rockButton").src='/newImg/hoverRockButton.png';
-        document.getElementById("rockDivWrapper").style.backgroundImage='url("/newImg/rockButtonHoverBackground.png")';
+        document.getElementById("rockButton").src='newImg/hoverRockButton.png';
+        document.getElementById("rockDivWrapper").style.backgroundImage='url("newImg/rockButtonHoverBackground.png")';
     };
 
 //    LikeButton Mouse Behavior
     document.getElementById("likeButton").onmouseout=function()
     {
-        document.getElementById("likeButton").src="/newImg/staticLikeButton.png"
+        document.getElementById("likeButton").src="newImg/staticLikeButton.png"
         document.getElementById("likeDivWrapper").style.backgroundImage='none';
     }
     document.getElementById("likeButton").onmouseover=function()
     {
-        document.getElementById("likeButton").src='/newImg/hoverLikeButton.png';
-        document.getElementById("likeDivWrapper").style.backgroundImage='url("/newImg/hoverButtonsBackground.png")';
+        document.getElementById("likeButton").src='newImg/hoverLikeButton.png';
+        document.getElementById("likeDivWrapper").style.backgroundImage='url("newImg/hoverButtonsBackground.png")';
     };
     document.getElementById("likeButton").onmousedown=function()
     {
-        document.getElementById("likeDivWrapper").style.backgroundImage='url("/newImg/pressedButtonsBackground.png")';
+        document.getElementById("likeDivWrapper").style.backgroundImage='url("newImg/pressedButtonsBackground.png")';
     }
     document.getElementById("likeButton").onmouseup=function()
     {
-        document.getElementById("likeDivWrapper").style.backgroundImage='url("/newImg/hoverButtonsBackground.png")';
+        document.getElementById("likeDivWrapper").style.backgroundImage='url("newImg/hoverButtonsBackground.png")';
     }
 
     //    DisLikeButton Mouse Behavior
@@ -197,16 +197,16 @@ $(document).ready(function() {
     }
     document.getElementById("dislikeButton").onmouseover=function()
     {
-        document.getElementById("dislikeButton").src='/newImg/hoverDislikeButton.png';
-        document.getElementById("dislikeDivWrapper").style.backgroundImage='url("/newImg/hoverButtonsBackground.png")';
+        document.getElementById("dislikeButton").src='newImg/hoverDislikeButton.png';
+        document.getElementById("dislikeDivWrapper").style.backgroundImage='url("newImg/hoverButtonsBackground.png")';
     };
     document.getElementById("dislikeButton").onmousedown=function()
     {
-        document.getElementById("dislikeDivWrapper").style.backgroundImage='url("/newImg/pressedButtonsBackground.png")';
+        document.getElementById("dislikeDivWrapper").style.backgroundImage='url("newImg/pressedButtonsBackground.png")';
     }
     document.getElementById("dislikeButton").onmouseup=function()
     {
-        document.getElementById("dislikeDivWrapper").style.backgroundImage='url("/newImg/hoverButtonsBackground.png")';
+        document.getElementById("dislikeDivWrapper").style.backgroundImage='url("newImg/hoverButtonsBackground.png")';
     }
 
     $("#rockButton").click(function(){
