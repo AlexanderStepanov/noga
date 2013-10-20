@@ -15,6 +15,7 @@
 <div id="backgroundContainer"></div>
 <div class="main" style="position: relative;">
     <section id="first" data-index="1">
+        <div style="position: absolute;height: 500px; width: 500px; left: 50%; margin-left: -250px" >
         <header id="ratinatorLabel">R A T I N A T O R</header>
         <header id="newMachineDicedeLabel">Машины решают, что хорошо. Вернем власть людям.</header>
                 <div id="formContainer">
@@ -27,6 +28,7 @@
                                 <p><span id="valid"></span></p>
                       </div>
                 </form>
+            </div>
             </div>
         </section>
     <section id="third" data-index="2">
@@ -62,8 +64,11 @@
         </div>
     </section>
 <section id="fourth" data-index="3">
-    <header id="ratinatorLabel">R A T I N A T O R</header>
-    <header id="newMachineDicedeLabel">Машины решают, что хорошо. Вернем власть людям.</header>
+
+    <div style="position: absolute;height: 500px; width: 500px; left: 50%; margin-left: -250px" >
+
+    <header id="ratinatorSecondLabel">R A T I N A T O R</header>
+    <header id="newMachineDicedeSecondLabel">Машины решают, что хорошо. Вернем власть людям.</header>
          <div id="secondFormContainer">
             <form name ="form2" method="post" action="index.php">
                 <div>
@@ -75,6 +80,7 @@
                 </div>
             </form>
         </div>
+    </div>
    </section>
 </div>
 </body>

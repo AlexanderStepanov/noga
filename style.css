@@ -206,12 +206,12 @@ html {
 
 #formContainer{
     left: 50%;
-    top: 100%;
+    top: 70%;
     position: absolute;
     width: 500px;
     height: 80px;
     margin-left: -250px;
-    margin-top: -250px;
+    margin-top: 40px;
 }
 
 #secondFormContainer{
@@ -221,7 +221,7 @@ html {
     width: 500px;
     height: 80px;
     margin-left: -250px;
-    margin-top: -40px;
+    margin-top: 40px;
 }
 
 #submitButton{
@@ -329,12 +329,31 @@ html {
     margin-left: -250px;
 }
 
+#ratinatorSecondLabel{
+    font-family: BlairMdITC;
+    color: white;
+    font-size: 35pt;
+    left: 50%;
+    position: absolute;
+    top: 200px;
+    margin-left: -250px;
+}
+
 #newMachineDicedeLabel{
     color: white;
     font-size: 12pt;
     left: 50%;
     position: absolute;
-    top: 320px;
+    top: 330px;
+    margin-left: -200px;
+}
+
+#newMachineDicedeSecondLabel{
+    color: white;
+    font-size: 12pt;
+    left: 50%;
+    position: absolute;
+    top: 300px;
     margin-left: -200px;
 }
 
