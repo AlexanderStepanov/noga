@@ -105,6 +105,9 @@ $(document).ready(function() {
     $('#email').on('keyup', clearEmailInput);
     $('#email').focus(emailChangeBackground);
 
+    $("#scrollDown").click(function(){
+        document.scrollTop = 10;
+    });
 
     $('#emailSecond').blur(validateForSecondEmailAndChangeBackGroundBack);
     $('#emailSecond').on('keyup', clearEmailInputSecond);

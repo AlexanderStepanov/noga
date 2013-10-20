@@ -504,6 +504,17 @@ html {
     margin-top: -50px;
 }
 
+#scrollDown{
+    color:white;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    font-size: 11pt;
+    cursor: hand;
+}
+
 /*End DisLikeButtonStyle*/
 
 
