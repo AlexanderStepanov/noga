@@ -15,7 +15,7 @@
 
 <div class="main" style="position: relative;">
     <section id="first" data-index="1">
-        <div style="position: absolute;height: 500px; width: 500px; left: 50%; margin-left: -250px" >
+        <div style="position: absolute;height: 500px; width: 500px;top: 50%; margin-top:-300px;left: 50%; margin-left: -250px">
         <header id="ratinatorLabel">R A T I N A T O R</header>
         <header id="newMachineDicedeLabel">Машины решают, что хорошо. Вернем власть людям.</header>
                 <div id="formContainer">
@@ -84,7 +84,7 @@
     </section>
 <section id="fourth" data-index="3">
 
-    <div style="position: absolute;height: 500px; width: 500px; left: 50%; margin-left: -250px" >
+    <div style="position: absolute;height: 500px; width: 500px;top: 50%; margin-top:-300px;left: 50%; margin-left: -250px">
 
     <header id="ratinatorSecondLabel">R A T I N A T O R</header>
     <header id="newMachineDicedeSecondLabel">Машины решают, что хорошо. Вернем власть людям.</header>
@@ -98,10 +98,21 @@
                     <p><span id="validSecond"></span></p>
                 </div>
             </form>
-
-
         </div>
-
+        <div id="socialButtonsDiv">
+            <script type="text/javascript">(function() {
+                    if (window.pluso)if (typeof window.pluso.start == "function") return;
+                    if (window.ifpluso==undefined) { window.ifpluso = 1;
+                        var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                        s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                        s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                        var h=d[g]('body')[0];
+                        h.appendChild(s);
+                    }})();</script>
+            <div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,counter,theme=04" data-services="vkontakte,facebook,twitter"></div>
+            <img id="whiteLine" src="newImg/whiteLine.png"/>
+            <header id="shareTextStyle">Поделиться</header>
+        </div>
     </div>
 
     <a id="bottomEmail" href="mailto:alex.stepanov@me.com">Написать нам</a>

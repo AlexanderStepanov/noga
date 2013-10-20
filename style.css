@@ -282,15 +282,30 @@ html {
 }
 
 #socialButtonsDiv{
-    margin-top: 50px;
     position: absolute;
-    top:70%;
+    top:100%;
     left:50%;
-    width: 170px;
-    margin-top: 100px;
-    margin-left: -100px;
+    margin-top: -34px;
+    margin-left: -253px;
+}
+#whiteLine{
+    position: absolute;
+    top:100%;
+    left:50%;
+    margin-top: -36px;
+    margin-left: 165px;
 }
 
+#shareTextStyle{
+    position: absolute;
+    color: white;
+    font-size: 14pt;
+    top:100%;
+    left:50%;
+    width: 170px;
+    margin-top: -48px;
+    margin-left: 280px;
+}
 .labyrinth {
     background-image: url('/img/labyrinth.png');
     height: 266px;
