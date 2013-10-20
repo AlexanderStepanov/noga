@@ -299,7 +299,6 @@ html {
 }
 
 #machinesDecideLabel{
-    font-family: langdon;
     color: white;
     font-size: 40pt;
     left: 50%;
@@ -309,7 +308,6 @@ html {
 }
 
 #returnPowerLabel{
-    font-family: langdon;
     color: white;
     font-size: 40pt;
     left: 50%;
@@ -357,10 +355,6 @@ html {
     margin-left: -200px;
 }
 
-@font-face {
-    font-family: 'langdon';
-    src: url('/langdon.otf');
-}
 @font-face {
     font-family: 'BlairMdITC';
     src: url('/BlairMdITCTT.ttf');
@@ -500,6 +494,14 @@ html {
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
+}
+
+#bottomEmail{
+    color: white;
+    position: absolute;
+    left: 30px;
+    top: 100%;
+    margin-top: -50px;
 }
 
 /*End DisLikeButtonStyle*/

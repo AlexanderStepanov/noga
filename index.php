@@ -96,8 +96,12 @@
                     <p><span id="validSecond"></span></p>
                 </div>
             </form>
+
+
         </div>
+
     </div>
+    <span id="bottomEmail">alex.stepanov@me.com</span>
    </section>
 </div>
 </body>
