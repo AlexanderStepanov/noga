@@ -65,7 +65,7 @@
              top: 50%;
              margin-top: -10px;
              left: 100%;"></div>
-            <span id="popupText" style="text-align: center; font-size: 50px;"></span>
+            <span id="popupText" style="text-align: center; font-size: 50px; font-family: helvetica"></span>
         </div>
         <div id="buttonsDescriptionContainer">
             <img style="position: absolute; margin-left: -175px; margin-top: -20px;" src="newImg/buttonsDescription.png" width="350px" />

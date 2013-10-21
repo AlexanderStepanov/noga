@@ -1,7 +1,7 @@
 <?php
 if (isset( $_GET['email']) && $_GET['email'] != '')
 {
-    $con=mysqli_connect("localhost","root","root","nogaDB");
+    $con=mysqli_connect("mysql.hostinger.com.ua","u176334619_root","qwertyui123","u176334619_rate");
     if (mysqli_connect_errno())
     {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
