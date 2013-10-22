@@ -554,7 +554,13 @@ html {
     margin-left: -50px;
 }
 
-/*End DisLikeButtonStyle*/
-
+#buttonsDescription{
+    position: absolute;
+    text-align: center;
+    margin-left: -250px;
+    margin-top: -20px;
+    width: 500px;
+    font-size: 14pt
+}
 
 

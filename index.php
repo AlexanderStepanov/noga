@@ -68,7 +68,7 @@
             <span id="popupText" style="text-align: center; font-size: 50px; font-family: helvetica"></span>
         </div>
         <div id="buttonsDescriptionContainer">
-            <img style="position: absolute; margin-left: -175px; margin-top: -20px;" src="newImg/buttonsDescription.png" width="350px" />
+            <h1 id="buttonsDescription">У тебя на каждой странице есть такие кнопки</h1>
             <img style="position: absolute; margin-top: 10px; margin-left: 20px;" src="newImg/arrow.png"/>
         </div>
         <div id="likeButtonsContainer">
