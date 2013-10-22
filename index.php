@@ -88,7 +88,7 @@
         </div>
         <div class="scrollUp">
         </div>
-    </section>
+      </section>
 <section id="fourth" data-index="3">
 
     <div style="position: absolute;height: 500px; width: 500px;top: 50%; margin-top:-300px;left: 50%; margin-left: -250px">
@@ -116,15 +116,13 @@
                         var h=d[g]('body')[0];
                         h.appendChild(s);
                     }})();</script>
-            <div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,counter,theme=04" data-services="vkontakte,facebook,twitter"></div>
+            <div class="pluso" style="margin-left: -5px" data-background="transparent" data-options="big,round,line,horizontal,counter,theme=04" data-services="vkontakte,facebook,twitter"></div>
             <img id="whiteLine" src="newImg/whiteLine.png"/>
             <header id="shareTextStyle">Поделиться</header>
         </div>
-    </div>
-
     <a id="bottomEmail" href="mailto:alex.stepanov@me.com">Написать нам</a>
-    <div class="scrollUp">
     </div>
+    <div class="scrollUp"></div>
    </section>
 </div>
 </body>

@@ -157,7 +157,6 @@ html {
 
 #emailDivSecond{
     background-image: url("newImg/staticTextBoxBackground.png");
-    background-size:335px 43px;
     padding-top: 10px;
     padding-left: 9px;
     display: inline-block;
@@ -190,7 +189,7 @@ html {
     color: white;
     font-size: 15pt;
     border: none;
-    width: 320px;
+    width: 280px;
     height: 25px;
 }
 
@@ -217,11 +216,10 @@ html {
     left: 50%;
     top: 70%;
     position: absolute;
-    width: 500px;
+    width: 475px;
     height: 80px;
-    margin-left: -250px;
-    margin-top: 40px;
-}
+    margin-left: -245px;
+ }
 
 #submitButton{
     outline: 0;
@@ -259,7 +257,7 @@ html {
     border: none;
     background-color: transparent;
     position: absolute;
-    left: 350px;
+    left: 340px;
 }
 #submitButtonSecond:hover
 {
@@ -282,28 +280,29 @@ html {
 
 #socialButtonsDiv{
     position: absolute;
+    width: 475px;
     top:100%;
     left:50%;
-    margin-top: -34px;
-    margin-left: -253px;
+    margin-top: -60px;
+    margin-left: -245px;
 }
 #whiteLine{
     position: absolute;
     top:100%;
     left:50%;
     margin-top: -36px;
-    margin-left: 165px;
+    margin-left: 50px;
 }
 
 #shareTextStyle{
     position: absolute;
     color: white;
-    font-size: 14pt;
+    font-size: 12pt;
     top:100%;
     left:50%;
-    width: 170px;
+    width: auto;
     margin-top: -48px;
-    margin-left: 280px;
+    margin-left: 155px;
 }
 .labyrinth {
     background-image: url('img/labyrinth.png');
@@ -334,21 +333,24 @@ html {
 #ratinatorLabel{
     font-family: BlairMdITC;
     color: white;
+    text-align: center;
     font-size: 35pt;
     left: 50%;
     position: absolute;
     top: 230px;
-    margin-left: -250px;
+    margin-left: -245px;
 }
 
 #ratinatorSecondLabel{
-    /*font-family: BlairMdITC;*/
+    font-family: BlairMdITC;
     color: white;
-    font-size: 35pt;
+    text-align: center;
+    font-size: 34pt;
     left: 50%;
     position: absolute;
     top: 200px;
-    margin-left: -250px;
+    width: 475px;
+    margin-left: -245px;
 }
 
 #newMachineDicedeLabel{
@@ -362,11 +364,13 @@ html {
 
 #newMachineDicedeSecondLabel{
     color: white;
-    font-size: 12pt;
+    width: 475px;
+    text-align: center;
+    font-size: 13pt;
     left: 50%;
     position: absolute;
-    top: 300px;
-    margin-left: -200px;
+    top: 270px;
+    margin-left: -245px;
 }
 
 @font-face {
@@ -515,7 +519,7 @@ html {
     position: absolute;
     left: 50%;
     top: 100%;
-    margin-top: -50px;
+    margin-top: 60px;
     margin-left: -40px;
 }
 
