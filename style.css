@@ -344,12 +344,10 @@ html {
 #ratinatorSecondLabel{
     font-family: BlairMdITC;
     color: white;
-    text-align: center;
     font-size: 34pt;
     left: 50%;
     position: absolute;
     top: 200px;
-    width: 475px;
     margin-left: -245px;
 }
 
