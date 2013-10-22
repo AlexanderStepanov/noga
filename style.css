@@ -146,7 +146,6 @@ html {
 }
 #emailDiv {
     background-image: url("newImg/staticTextBoxBackground.png");
-    background-size:335px 43px;
     padding-top: 10px;
     padding-left: 9px;
     display: inline-block;
@@ -173,7 +172,7 @@ html {
     color: white;
     font-size: 15pt;
     border: none;
-    width: 320px;
+    width: 280px;
     height: 25px;
 }
 
@@ -208,10 +207,10 @@ html {
     left: 50%;
     top: 70%;
     position: absolute;
-    width: 500px;
+    width: 490px;
     height: 80px;
-    margin-left: -250px;
-    margin-top: 40px;
+    margin-left: -245px;
+    margin-top: 35px;
 }
 
 #secondFormContainer{
@@ -343,7 +342,7 @@ html {
 }
 
 #ratinatorSecondLabel{
-    font-family: BlairMdITC;
+    /*font-family: BlairMdITC;*/
     color: white;
     font-size: 35pt;
     left: 50%;
@@ -357,7 +356,7 @@ html {
     font-size: 12pt;
     left: 50%;
     position: absolute;
-    top: 330px;
+    top: 300px;
     margin-left: -200px;
 }
 
