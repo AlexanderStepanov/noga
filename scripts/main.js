@@ -135,6 +135,7 @@ $(document).ready(function() {
             var url = 'send_email.php?email=' + $('#email').val();
             $.get(url).done(function(data) {
                 setInfo1(successText);
+                ga('send', 'event', 'main', 'subscribe');
 //                 alert( "success" );
             });
         }
@@ -147,6 +148,7 @@ $(document).ready(function() {
                     var url = 'send_email.php?email=' + $('#emailSecond').val();
                     $.get(url).done(function(data) {
                     setInfo2(successText);
+                    ga('send', 'event', 'main', 'subscribe');
                 //                alert( "success" );
                     });
                 }

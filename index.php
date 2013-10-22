@@ -9,6 +9,20 @@
     <link type="text/css" rel="stylesheet" href="style.css" />
     <link type="text/css" rel="stylesheet" href="onepage-scroll.css" />
     <title>Ratinator - Вернем власть людям</title>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-30161384-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
 </head>
 <body>
 
@@ -68,7 +82,7 @@
             <span id="popupText" style="text-align: center; font-size: 50px; font-family: helvetica"></span>
         </div>
         <div id="buttonsDescriptionContainer">
-            <h1 id="buttonsDescription">У тебя на каждой странице есть такие кнопки</h1>
+            <h1 id="buttonsDescription">У тебя на каждой странице будут такие кнопки</h1>
             <img style="position: absolute; margin-top: 10px; margin-left: 20px;" src="newImg/arrow.png"/>
         </div>
         <div id="likeButtonsContainer">
