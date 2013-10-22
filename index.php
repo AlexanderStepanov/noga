@@ -30,7 +30,16 @@
 <div class="main" style="position: relative;">
     <section id="first" data-index="1">
         <div style="position: absolute;height: 500px; width: 500px;top: 50%; margin-top:-300px;left: 50%; margin-left: -250px">
-        <header id="ratinatorLabel">R A T I N A T O R</header>
+            <header class="ratinatorLabel" style="margin-left: -239px;">R</header>
+            <header class="ratinatorLabel" style="margin-left: -179px;">A</header>
+            <header class="ratinatorLabel" style="margin-left: -126px;">T</header>
+            <header class="ratinatorLabel" style="margin-left: -74px;">I</header>
+            <header class="ratinatorLabel" style="margin-left: -45px;">N</header>
+            <header class="ratinatorLabel" style="margin-left: 19px;">A</header>
+            <header class="ratinatorLabel" style="margin-left: 73px;">T</header>
+            <header class="ratinatorLabel" style="margin-left: 124px;">O</header>
+            <header class="ratinatorLabel" style="margin-left: 190px;">R</header>
+
         <header id="newMachineDicedeLabel">Машины решают, что хорошо. Вернем власть людям.</header>
                 <div id="formContainer">
                  <form name ="form1" method="post" action="index.php">
@@ -104,10 +113,17 @@
         </div>
       </section>
 <section id="fourth" data-index="3">
-
     <div style="position: absolute;height: 500px; width: 500px;top: 50%; margin-top:-300px;left: 50%; margin-left: -250px">
+        <header class="ratinatorSecondLabel" style="margin-left: -239px;">R</header>
+        <header class="ratinatorSecondLabel" style="margin-left: -179px;">A</header>
+        <header class="ratinatorSecondLabel" style="margin-left: -126px;">T</header>
+        <header class="ratinatorSecondLabel" style="margin-left: -74px;">I</header>
+        <header class="ratinatorSecondLabel" style="margin-left: -45px;">N</header>
+        <header class="ratinatorSecondLabel" style="margin-left: 19px;">A</header>
+        <header class="ratinatorSecondLabel" style="margin-left: 73px;">T</header>
+        <header class="ratinatorSecondLabel" style="margin-left: 124px;">O</header>
+        <header class="ratinatorSecondLabel" style="margin-left: 190px;">R</header>
 
-    <header id="ratinatorSecondLabel">R A T I N A T O R</header>
     <header id="newMachineDicedeSecondLabel">Машины решают, что хорошо. Вернем власть людям.</header>
          <div id="secondFormContainer">
             <form name ="form2" method="post" action="index.php">
@@ -130,7 +146,7 @@
                         var h=d[g]('body')[0];
                         h.appendChild(s);
                     }})();</script>
-            <div class="pluso" style="margin-left: -5px" data-background="transparent" data-options="big,round,line,horizontal,counter,theme=04" data-services="vkontakte,facebook,twitter"></div>
+            <div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,counter,theme=04" data-services="vkontakte,facebook,twitter"></div>
             <img id="whiteLine" src="newImg/whiteLine.png"/>
             <header id="shareTextStyle">Поделиться</header>
         </div>

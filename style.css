@@ -30,15 +30,15 @@ html {
 
 #valid{
     position: absolute;
-    margin-top: 50px;
-    margin-left: 20px;
+    margin-top: 54px;
+    margin-left: 18px;
     color: white;
 }
 
 #validSecond{
     position: absolute;
-    margin-top: 50px;
-    margin-left: 20px;
+    margin-top: 54px;
+    margin-left: 18px;
     color: white;
 }
 
@@ -58,10 +58,8 @@ html {
     position: absolute;
     min-height: 100%;
     background-image: url("newImg/backgoungOfFirstSlide.jpg");
-    /*position:  absolute;*/
     background-size: cover;
     background-repeat: no-repeat;
-    /*background-size: 100%;*/
     background-position: top;
 }
 
@@ -94,10 +92,6 @@ html {
     background-size: cover;
     background-image: url("newImg/thirdSectionBackground.png");
     background-repeat: no-repeat;
-}
-
-#second img{
-    /*opacity: 0.34;*/
 }
 
 #second #secondLeftBlock{
@@ -206,19 +200,20 @@ html {
     left: 50%;
     top: 70%;
     position: absolute;
-    width: 490px;
+    width: 470px;
     height: 80px;
-    margin-left: -245px;
-    margin-top: 35px;
+    margin-left: -236px;
+    margin-top: 19px;
 }
 
 #secondFormContainer{
     left: 50%;
-    top: 70%;
+    top: 60%;
     position: absolute;
     width: 475px;
     height: 80px;
-    margin-left: -245px;
+    margin-top: 20px;
+    margin-left: -235px;
  }
 
 #submitButton{
@@ -232,7 +227,7 @@ html {
     border: none;
     background-color: transparent;
     position: absolute;
-    left: 350px;
+    left: 334px;
 }
 #submitButton:hover
 {
@@ -257,7 +252,7 @@ html {
     border: none;
     background-color: transparent;
     position: absolute;
-    left: 340px;
+    left: 333px;
 }
 #submitButtonSecond:hover
 {
@@ -283,15 +278,15 @@ html {
     width: 475px;
     top:100%;
     left:50%;
-    margin-top: -60px;
-    margin-left: -245px;
+    margin-top: -88px;
+    margin-left: -240px;
 }
 #whiteLine{
     position: absolute;
     top:100%;
     left:50%;
-    margin-top: -36px;
-    margin-left: 50px;
+    margin-top: -34px;
+    margin-left: 53px;
 }
 
 #shareTextStyle{
@@ -301,8 +296,8 @@ html {
     top:100%;
     left:50%;
     width: auto;
-    margin-top: -48px;
-    margin-left: 155px;
+    margin-top: -42px;
+    margin-left: 149px;
 }
 .labyrinth {
     background-image: url('img/labyrinth.png');
@@ -330,45 +325,41 @@ html {
     margin-left: -300px;
 }
 
-#ratinatorLabel{
+.ratinatorLabel{
     font-family: BlairMdITC;
     color: white;
     text-align: center;
     font-size: 35pt;
     left: 50%;
     position: absolute;
-    top: 230px;
-    margin-left: -245px;
+    top: 215px;
 }
 
-#ratinatorSecondLabel{
+.ratinatorSecondLabel{
     font-family: BlairMdITC;
     color: white;
-    font-size: 34pt;
+    font-size: 35pt;
     left: 50%;
     position: absolute;
-    top: 200px;
-    margin-left: -245px;
+    top: 166px;
 }
 
 #newMachineDicedeLabel{
     color: white;
-    font-size: 12pt;
+    font-size: 13pt;
     left: 50%;
     position: absolute;
-    top: 300px;
-    margin-left: -200px;
+    top: 286px;
+    margin-left: -204px;
 }
 
 #newMachineDicedeSecondLabel{
     color: white;
-    width: 475px;
-    text-align: center;
     font-size: 13pt;
     left: 50%;
     position: absolute;
-    top: 270px;
-    margin-left: -245px;
+    top: 238px;
+    margin-left: -204px;
 }
 
 @font-face {
