@@ -3,13 +3,6 @@
 
 <html>
 <head>
-    <script type="text/javascript" src="scripts/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript" src="scripts/main.js"></script>
-    <script type="text/javascript" src="jquery.onepage-scroll.js" ></script>
-    <link type="text/css" rel="stylesheet" href="style.css" />
-    <link type="text/css" rel="stylesheet" href="onepage-scroll.css" />
-    <title>Ratinator - Вернем власть людям</title>
-
     <script type="text/javascript">
 
         var _gaq = _gaq || [];
@@ -23,6 +16,13 @@
         })();
 
     </script>
+
+    <script type="text/javascript" src="scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="jquery.onepage-scroll.js" ></script>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link type="text/css" rel="stylesheet" href="onepage-scroll.css" />
+    <title>Ratinator - Вернем власть людям</title>
 </head>
 <body>
 

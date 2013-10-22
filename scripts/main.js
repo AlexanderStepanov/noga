@@ -135,7 +135,8 @@ $(document).ready(function() {
             var url = 'send_email.php?email=' + $('#email').val();
             $.get(url).done(function(data) {
                 setInfo1(successText);
-                ga('send', 'event', 'main', 'subscribe');
+                _gaq.push(['_trackEvent', 'subscribe', 'subscribe'])
+                //ga('send', 'event', 'main', 'subscribe');
 //                 alert( "success" );
             });
         }
