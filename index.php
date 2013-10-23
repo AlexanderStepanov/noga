@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <meta charset="UTF-8" xmlns="http://www.w3.org/1999/html"/>
 
 <html>
 <head>
-    <script type="text/javascript">
 
+    <link rel="image_src" href="newImg/firstSlideScreenShot.jpg"/>
+
+    <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-30161384-1']);
         _gaq.push(['_trackPageview']);
